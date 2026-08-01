@@ -15,7 +15,7 @@ const avatars = [
 
 export function Hero() {
   return (
-    <section id="top" className="hero-glow relative overflow-hidden pt-[112px]">
+    <section id="top" className="hero-glow relative z-10 pt-[112px]">
       <div className="relative mx-auto w-full max-w-[1200px] px-5 sm:px-8">
         <div
           aria-hidden
