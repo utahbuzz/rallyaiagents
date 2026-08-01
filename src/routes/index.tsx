@@ -1,24 +1,57 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import { About } from "@/components/landing/about";
+import { Benefits } from "@/components/landing/benefits";
+import { Faq } from "@/components/landing/faq";
+import { Features } from "@/components/landing/features";
+import { FinalCta } from "@/components/landing/final-cta";
+import { Footer } from "@/components/landing/footer";
+import { Hero } from "@/components/landing/hero";
+import { HowItWorks } from "@/components/landing/how-it-works";
+import { Nav } from "@/components/landing/nav";
+import { Pricing } from "@/components/landing/pricing";
+import { Problem } from "@/components/landing/problem";
+import { SetupHighlight } from "@/components/landing/setup-highlight";
+import { Testimonials } from "@/components/landing/testimonials";
+import { TrustBar } from "@/components/landing/trust-bar";
+
+const title = "Rally — AI Agents That Fill Orthodontic Chairs";
+const description =
+  "Rally deploys AI agents for orthodontic practices: instant lead follow-up, 24/7 booking, reminders and reactivation. Pay per seated consult. Book a discovery call.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background">
+      <Nav />
+      <main>
+        <Hero />
+        <TrustBar />
+        <About />
+        <Problem />
+        <HowItWorks />
+        <Features />
+        <SetupHighlight />
+        <Benefits />
+        <Testimonials />
+        <Pricing />
+        <Faq />
+        <FinalCta />
+      </main>
+      <Footer />
     </div>
   );
 }
