@@ -93,6 +93,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Rally — AI agents for orthodontic practices" },
+      { name: "twitter:description", content: "Rally deploys AI agents for orthodontic practices so every lead is followed up and every chair gets filled." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e86f395d-e906-47b1-9642-cafa89d986d2/id-preview-093037b7--168493bc-6ea3-4b28-9c3c-97bdbefc2167.lovable.app-1785597404290.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e86f395d-e906-47b1-9642-cafa89d986d2/id-preview-093037b7--168493bc-6ea3-4b28-9c3c-97bdbefc2167.lovable.app-1785597404290.png" },
     ],
     links: [
       {
