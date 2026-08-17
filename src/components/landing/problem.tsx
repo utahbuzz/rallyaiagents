@@ -1,56 +1,57 @@
-import { CalendarX2, Target, TimerOff, TriangleAlert } from "lucide-react";
+import { Label, Reveal, Section } from "./primitives";
 
-import { Reveal, Section, SectionHeading, SectionPill } from "./primitives";
-
-const pains = [
+const costs = [
   {
-    icon: TimerOff,
-    title: "Slow follow-up kills leads",
-    body: "A lead that waits 5 minutes is 10x less likely to book. Your team can't text back instantly every time.",
+    line: "A lead fills out your form Friday at 6pm.",
+    consequence: "Your front desk sees it Monday. They booked somewhere else Saturday.",
   },
   {
-    icon: CalendarX2,
-    title: "No-shows waste your time",
-    body: "You blocked the chair, prepped the team, and they just... didn't come. No call, no text, nothing.",
+    line: "Your phone rings while the coordinator is chairside.",
+    consequence: "No voicemail, no callback, no consult.",
   },
   {
-    icon: Target,
-    title: "Agencies sell leads, not patients",
-    body: "You're paying for leads that never convert. High volume, high no-show, high frustration.",
+    line: "Someone asks about insurance at 10pm.",
+    consequence: "They wanted an answer, not a form.",
+  },
+  {
+    line: "Two hundred past-due patients sit in your system.",
+    consequence: "Reaching out to them is a full day nobody has.",
   },
 ];
 
 export function Problem() {
   return (
-    <Section id="problem" tone="white">
-      <div className="flex flex-col items-center text-center">
-        <Reveal>
-          <SectionPill icon={TriangleAlert}>Why Rally</SectionPill>
-        </Reveal>
-        <Reveal delay={60}>
-          <SectionHeading
-            className="mt-6"
-            title="Leads come in. Patients don't show up."
-            subtitle="You're spending thousands on ads. Your front desk is buried in follow-up. And half your consults are empty chairs."
-          />
-        </Reveal>
-      </div>
+    <Section id="problem" tone="ink">
+      <Reveal>
+        <Label tone="bone">What this actually costs you</Label>
+      </Reveal>
 
-      <div className="mt-14 grid gap-5 md:grid-cols-3">
-        {pains.map((p, i) => (
+      <Reveal delay={70}>
+        <h2 className="mt-6 max-w-[26ch] text-[2rem] text-bone sm:text-[3rem]">
+          The leads are already there. Nobody is picking them up.
+        </h2>
+      </Reveal>
+
+      <div className="mt-14">
+        {costs.map((c, i) => (
           <Reveal
-            key={p.title}
-            delay={i * 90}
-            className="rounded-3xl border border-border bg-cream p-7 transition-colors hover:bg-muted"
+            key={c.line}
+            delay={i * 80}
+            className="grid gap-2 border-t border-bone/15 py-7 last:border-b md:grid-cols-2 md:gap-10"
           >
-            <span className="tint flex size-11 items-center justify-center rounded-2xl">
-              <p.icon className="size-5 text-primary" strokeWidth={2} />
-            </span>
-            <h3 className="mt-5 text-[19px] font-medium text-ink">{p.title}</h3>
-            <p className="mt-2.5 text-[14.5px] leading-relaxed text-warm-grey">{p.body}</p>
+            <p className="font-display text-[1.35rem] leading-tight font-semibold text-bone sm:text-[1.6rem]">
+              {c.line}
+            </p>
+            <p className="text-[16px] leading-relaxed text-bone/55">{c.consequence}</p>
           </Reveal>
         ))}
       </div>
+
+      <Reveal delay={80}>
+        <p className="mt-12 font-display text-[1.4rem] font-semibold text-primary sm:text-[1.8rem]">
+          None of this is a staffing problem. It&apos;s a coverage problem.
+        </p>
+      </Reveal>
     </Section>
   );
 }
