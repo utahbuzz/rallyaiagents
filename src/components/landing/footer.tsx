@@ -50,7 +50,8 @@ export function Footer() {
               className="h-11 w-auto brightness-0 invert"
             />
             <p className="mt-3 max-w-[30ch] text-[14px] leading-relaxed text-bone/55">
-              AI agents that fill chairs for orthodontic practices
+              AI that runs the front office work your team never gets to.
+
             </p>
             <div className="mt-6 flex gap-2.5">
               {socials.map((s) => (
