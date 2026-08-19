@@ -13,6 +13,8 @@ Exact palette as tokens: burgundy #6B2332, burgundy-dark #501A26, ink #1A1A17, b
 - Alternating white / bone sections; shared `PillBadge` (tint bg, thin burgundy border, 6px dot, uppercase mono label).
 - Reveal-on-scroll: fade-in-up, 24px, ~0.7s, one-time; card hover lift 2px; full `prefers-reduced-motion` disable.
 - Visible focus rings on every interactive element.
+- Reused from the current build: the `Section` shell with dashed container guides, `Reveal`, and the mock-UI approach (real HTML/CSS mocks, not images) — so spacing and card language stay Flexfolio-like.
+
 
 ## Sections (each its own file in src/components/landing/)
 
