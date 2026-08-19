@@ -141,10 +141,11 @@
   h2,
   h3,
   h4 {
-    font-family: var(--font-display);
+    font-family: var(--font-sans);
     font-weight: 600;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
   }
+
 
   :focus-visible {
     outline: 2px solid var(--primary);
