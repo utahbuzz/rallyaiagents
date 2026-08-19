@@ -36,7 +36,7 @@ export function Features() {
       <div className="mt-16 flex flex-col gap-16 sm:gap-20">
         {rows.map((r, i) => (
           <div key={r.title} className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-            <Reveal delay={i * 60} className={r.flip ? "lg:order-2" : undefined}>
+            <Reveal delay={i * 60} className={r.flip ? "lg:order-2" : ""}>
               <MonoLabel>{r.label}</MonoLabel>
               <h3 className="mt-5 text-[1.6rem] leading-snug font-semibold text-ink sm:text-[2rem]">
                 {r.title}
@@ -44,7 +44,7 @@ export function Features() {
               <p className="mt-4 text-[16.5px] leading-relaxed text-warm-grey">{r.body}</p>
               <Cta variant="outline" className="mt-7" label="Book the free call →" />
             </Reveal>
-            <Reveal delay={i * 60 + 80} className={r.flip ? "lg:order-1" : undefined}>
+            <Reveal delay={i * 60 + 80} className={r.flip ? "lg:order-1" : ""}>
               <div className="lift rounded-[1.6rem] bg-bone p-4 sm:p-6">{r.mock}</div>
             </Reveal>
           </div>
