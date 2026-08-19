@@ -2,7 +2,6 @@ import { useState, type FormEvent } from "react";
 import { ArrowRight, Facebook, Instagram, Linkedin } from "lucide-react";
 import { toast } from "sonner";
 
-import rallyLogo from "@/assets/rally-logo.png.asset.json";
 
 const company = [
   { label: "The problem", href: "#problem" },
@@ -42,13 +41,8 @@ export function Footer() {
       <div className="mx-auto w-full max-w-[1200px] px-5 py-16 sm:px-8 sm:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.3fr_0.7fr_0.7fr_1.2fr]">
           <div>
-            <img
-              src={rallyLogo.url}
-              alt="Rally"
-              width={1519}
-              height={961}
-              className="h-11 w-auto brightness-0 invert"
-            />
+            <p className="text-[24px] font-semibold tracking-[-0.03em] text-bone">Rally</p>
+
             <p className="mt-3 max-w-[30ch] text-[14px] leading-relaxed text-bone/55">
               AI that runs the front office work your team never gets to.
 

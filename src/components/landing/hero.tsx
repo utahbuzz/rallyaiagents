@@ -30,7 +30,7 @@ export function Hero() {
           <Reveal delay={80}>
             <h1 className="mt-7 max-w-[20ch] text-[2.5rem] leading-[1.06] font-semibold text-ink sm:text-[3.6rem] lg:text-[4.2rem]">
               Your practice already has AI.{" "}
-              <span className="text-primary italic">It just isn&apos;t moving anything.</span>
+              <span className="text-primary">It just isn&apos;t moving anything.</span>
             </h1>
           </Reveal>
 

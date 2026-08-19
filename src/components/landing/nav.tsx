@@ -37,7 +37,7 @@ export function Nav() {
       <div className="mx-auto flex h-[76px] w-full max-w-[1200px] items-center justify-between px-5 sm:px-8">
         <a
           href="#top"
-          className="focus-ring rounded-md font-display text-[28px] font-semibold text-primary italic"
+          className="focus-ring rounded-md text-[24px] font-semibold tracking-[-0.03em] text-primary"
         >
           Rally
         </a>
