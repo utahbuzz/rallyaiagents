@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
+import rallyLogo from "@/assets/rally-logo.png.asset.json";
 import { cn } from "@/lib/utils";
+
 
 import { CTA_LABEL } from "./primitives";
 
@@ -35,12 +37,10 @@ export function Nav() {
       )}
     >
       <div className="mx-auto flex h-[76px] w-full max-w-[1200px] items-center justify-between px-5 sm:px-8">
-        <a
-          href="#top"
-          className="focus-ring rounded-md text-[24px] font-semibold tracking-[-0.03em] text-primary"
-        >
-          Rally
+        <a href="#top" className="focus-ring rounded-md" aria-label="Rally home">
+          <img src={rallyLogo.url} alt="Rally" className="h-9 w-auto sm:h-10" />
         </a>
+
 
         <nav aria-label="Primary" className="hidden items-center gap-7 xl:flex">
           {links.map((l) => (
