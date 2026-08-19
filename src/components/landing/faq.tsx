@@ -5,44 +5,28 @@ import { Cta, PillBadge, Reveal, Section } from "./primitives";
 
 const items = [
   {
-    q: "How much of my time does this take?",
-    a: "The call is 25 minutes. The audit needs about an hour of someone's time, usually your office manager. After that we're doing the work and reporting on it.",
+    q: "Do I need to know anything about AI?",
+    a: "No. That's the point of us. We explain it in plain English and show you on your own work.",
   },
   {
-    q: "How is this different from the AI vendors calling me every week?",
-    a: "They sell you software and leave. We agree on a number, build the workflow, and run it. If the number doesn't move in 60 days you don't pay the retainer.",
+    q: "What does it cost?",
+    a: "The first call is free. The workshop is a one-time fee we quote on that call. If you want us to keep going after that, it's a monthly retainer, month to month.",
+  },
+  {
+    q: "How much of my time does this take?",
+    a: "Twenty-five minutes for the first call. The workshop is a couple of hours with your team. After that we do the work and report back.",
+  },
+  {
+    q: "Is patient data safe?",
+    a: "Yes. We work under a signed BAA, keep data in your existing systems, and never use patient information to train models.",
   },
   {
     q: "Does the AI make clinical decisions?",
-    a: "No. It never diagnoses, never recommends treatment, and never explains clinical findings on its own. Clinical judgment stays with your licensed team. Anything clinical that gets drafted is reviewed and approved by a human before it counts.",
+    a: "Never. Clinical judgment stays with your licensed team. Anything clinical is reviewed by a person first.",
   },
   {
-    q: "We bought a tool already and nothing changed.",
-    a: "That's most practices. A tool with nobody operating it is a subscription. The build is only a third of what we do — running it is the rest.",
-  },
-  {
-    q: "Will patients know they're talking to AI?",
-    a: "It introduces itself as your practice, answers plainly, and hands off to a person the moment the conversation needs one. We don't pretend it's a receptionist named Amber.",
-  },
-  {
-    q: "Will my team feel like they're being replaced?",
-    a: "The work we take is the work they complain about: verification, chasing texts, recall lists. Nobody has ever asked us for their voicemail backlog back.",
-  },
-  {
-    q: "Who actually does the work?",
-    a: "We do. You get one person accountable for the KPI, not a ticket queue.",
-  },
-  {
-    q: "What results should I expect?",
-    a: "It depends on the bucket and your baseline, which is exactly why we set the 60-day target together before building. We'd rather commit to one honest number than promise a range we made up.",
-  },
-  {
-    q: "How is patient data handled?",
-    a: "Under a signed BAA, with access limited to the systems required for the workflow. Data stays in your existing systems of record, transfers are encrypted, access is logged and revoked when an engagement ends, and we do not use patient information to train models.",
-  },
-  {
-    q: "How long is the contract?",
-    a: "Month to month once we're running. Thirty days' notice and we hand everything over.",
+    q: "Will my team feel replaced?",
+    a: "The work we take is the work they complain about. Nobody has asked us for their voicemail backlog back.",
   },
 ];
 
