@@ -6,8 +6,10 @@ import { cn } from "@/lib/utils";
 import { CTA_LABEL } from "./primitives";
 
 const links = [
+  { label: "About", href: "#about" },
   { label: "How it works", href: "#how" },
   { label: "What we help with", href: "#help" },
+  { label: "Results", href: "#results" },
   { label: "FAQ", href: "#faq" },
 ];
 
