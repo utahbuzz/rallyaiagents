@@ -1,6 +1,6 @@
 # Rally — full page rewrite (v5)
 
-Rebuild `/` as the new conversion-focused page for Rally (AI partner for dental + orthodontic practices), single goal: book the free 25-minute call. The current Flexfolio-style sections are replaced.
+Rebuild `/` as the new conversion-focused page for Rally (AI partner for dental + orthodontic practices), single goal: book the free 25-minute call. New sections and copy, but the Flexfolio layout language stays: 1200px container with dashed vertical guide lines, generous 96-128px section rhythm, pill badge + centered heading openers, bento grids, floating cards that overlap the next section, and the rounded-top full-width CTA band.
 
 Note: `rally-v5.html` was not attached, so all copy will be written to the voice spec in your brief — friendly, blunt, short sentences, one dry aside per section max, straight and sincere in Where We Draw The Line, the data/HIPAA answer, and the Happy Tooth numbers. No banned words, no emoji, no exclamation points.
 
@@ -13,6 +13,8 @@ Exact palette as tokens: burgundy #6B2332, burgundy-dark #501A26, ink #1A1A17, b
 - Alternating white / bone sections; shared `PillBadge` (tint bg, thin burgundy border, 6px dot, uppercase mono label).
 - Reveal-on-scroll: fade-in-up, 24px, ~0.7s, one-time; card hover lift 2px; full `prefers-reduced-motion` disable.
 - Visible focus rings on every interactive element.
+- Reused from the current build: the `Section` shell with dashed container guides, `Reveal`, and the mock-UI approach (real HTML/CSS mocks, not images) — so spacing and card language stay Flexfolio-like.
+
 
 ## Sections (each its own file in src/components/landing/)
 
