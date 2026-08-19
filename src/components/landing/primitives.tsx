@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState, type ElementType, type ReactNode } from "react";
-import { Star } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
-/** Fade-in-up on scroll. */
+export const CTA_LABEL = "Book the free 25-minute call →";
+
+/** Fade-in-up on scroll, one time per element. */
 export function Reveal({
   children,
   className,
@@ -30,7 +31,7 @@ export function Reveal({
           }
         }
       },
-      { rootMargin: "0px 0px -12% 0px", threshold: 0.06 },
+      { rootMargin: "0px 0px -10% 0px", threshold: 0.05 },
     );
     observer.observe(node);
     return () => observer.disconnect();
@@ -47,26 +48,74 @@ export function Reveal({
   );
 }
 
-/** Small rounded label pill used at the top of every section. */
-export function SectionPill({
-  icon: Icon,
-  children,
-  className,
-}: {
-  icon: ElementType;
-  children: ReactNode;
-  className?: string;
-}) {
+/** Mono eyebrow pill with a burgundy dot — opens every section. */
+export function PillBadge({ children, className }: { children: ReactNode; className?: string }) {
   return (
     <span
       className={cn(
-        "tint inline-flex items-center gap-2 rounded-full border border-tint px-3.5 py-1.5 text-[13px] font-medium text-warm-grey",
+        "tint inline-flex items-center gap-2 rounded-full border border-tint px-3.5 py-1.5 font-mono text-[11px] tracking-[0.14em] text-primary uppercase",
         className,
       )}
     >
-      <Icon className="size-3.5 text-primary" strokeWidth={2.2} />
+      <span aria-hidden className="size-1.5 rounded-full bg-primary" />
       {children}
     </span>
+  );
+}
+
+export function MonoLabel({ children, className }: { children: ReactNode; className?: string }) {
+  return (
+    <span
+      className={cn(
+        "font-mono text-[11px] tracking-[0.14em] text-warm-grey uppercase",
+        className,
+      )}
+    >
+      {children}
+    </span>
+  );
+}
+
+export function KpiTag({ children, className }: { children: ReactNode; className?: string }) {
+  return (
+    <span
+      className={cn(
+        "tint inline-flex rounded-full px-3 py-1.5 font-mono text-[11px] tracking-[0.1em] text-primary uppercase",
+        className,
+      )}
+    >
+      {children}
+    </span>
+  );
+}
+
+/** The single CTA used everywhere. */
+export function Cta({
+  variant = "solid",
+  className,
+  label = CTA_LABEL,
+  href = "#book",
+}: {
+  variant?: "solid" | "outline" | "light";
+  className?: string;
+  label?: string;
+  href?: string;
+}) {
+  return (
+    <a
+      href={href}
+      className={cn(
+        "focus-ring inline-flex items-center justify-center rounded-full px-6 py-3.5 text-[15px] font-semibold transition-all",
+        variant === "solid" &&
+          "bg-primary text-primary-foreground hover:bg-primary-deep hover:-translate-y-0.5",
+        variant === "outline" &&
+          "border border-border bg-background text-ink hover:border-primary hover:text-primary",
+        variant === "light" && "bg-white text-primary hover:-translate-y-0.5",
+        className,
+      )}
+    >
+      {label}
+    </a>
   );
 }
 
@@ -82,41 +131,28 @@ export function SectionHeading({
   className?: string;
 }) {
   return (
-    <div
-      className={cn(
-        align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-xl",
-        className,
-      )}
-    >
-      <h2 className="text-[2rem] leading-[1.1] font-medium text-ink sm:text-[2.6rem]">{title}</h2>
+    <div className={cn(align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-2xl", className)}>
+      <h2 className="text-[2rem] leading-[1.12] font-semibold text-ink sm:text-[2.6rem]">{title}</h2>
       {subtitle ? (
-        <p className="mt-4 text-[15px] leading-relaxed text-warm-grey">{subtitle}</p>
+        <p className="mt-4 text-[16px] leading-relaxed text-warm-grey">{subtitle}</p>
       ) : null}
     </div>
   );
 }
 
-export function Stars({ className }: { className?: string }) {
-  return (
-    <div className={cn("flex items-center gap-0.5", className)}>
-      {Array.from({ length: 5 }).map((_, i) => (
-        <Star key={i} className="size-3.5 fill-primary text-primary" />
-      ))}
-    </div>
-  );
-}
-
-/** Section shell with the reference's dashed vertical container guides. */
+/** Section shell with the dashed container guides. */
 export function Section({
   id,
   children,
   className,
   tone = "white",
+  bare = false,
 }: {
   id?: string;
   children: ReactNode;
   className?: string;
   tone?: "white" | "bone" | "none";
+  bare?: boolean;
 }) {
   return (
     <section
@@ -131,13 +167,13 @@ export function Section({
       <div className="relative mx-auto w-full max-w-[1200px] px-5 sm:px-8">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-y-0 left-5 hidden border-l border-dashed border-border/70 sm:left-8 lg:block"
+          className="pointer-events-none absolute inset-y-0 left-5 hidden border-l border-dashed border-border sm:left-8 lg:block"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-y-0 right-5 hidden border-r border-dashed border-border/70 sm:right-8 lg:block"
+          className="pointer-events-none absolute inset-y-0 right-5 hidden border-r border-dashed border-border sm:right-8 lg:block"
         />
-        <div className="relative py-20 sm:py-24 lg:py-28">{children}</div>
+        <div className={cn(!bare && "py-20 sm:py-24 lg:py-32", "relative")}>{children}</div>
       </div>
     </section>
   );

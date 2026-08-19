@@ -5,18 +5,18 @@ import { toast } from "sonner";
 import rallyLogo from "@/assets/rally-logo.png.asset.json";
 
 const company = [
-  { label: "Home", href: "#top" },
-  { label: "About", href: "#top" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Blog", href: "#top" },
+  { label: "The problem", href: "#problem" },
+  { label: "Our limits", href: "#limits" },
+  { label: "The Rally method", href: "#method" },
+  { label: "What we build", href: "#build" },
 ];
 
 const product = [
-  { label: "Features", href: "#features" },
-  { label: "How it works", href: "#how" },
+  { label: "Case study", href: "#case-study" },
   { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#book" },
+  { label: "Book a call", href: "#book" },
 ];
+
 
 const socials = [
   { icon: Facebook, label: "Facebook" },
@@ -50,7 +50,8 @@ export function Footer() {
               className="h-11 w-auto brightness-0 invert"
             />
             <p className="mt-3 max-w-[30ch] text-[14px] leading-relaxed text-bone/55">
-              AI agents that fill chairs for orthodontic practices
+              AI that runs the front office work your team never gets to.
+
             </p>
             <div className="mt-6 flex gap-2.5">
               {socials.map((s) => (

@@ -1,56 +1,67 @@
-import { CalendarX2, Target, TimerOff, TriangleAlert } from "lucide-react";
+import { Cta, PillBadge, Reveal, Section, SectionHeading } from "./primitives";
 
-import { Reveal, Section, SectionHeading, SectionPill } from "./primitives";
-
-const pains = [
+const stats = [
   {
-    icon: TimerOff,
-    title: "Slow follow-up kills leads",
-    body: "A lead that waits 5 minutes is 10x less likely to book. Your team can't text back instantly every time.",
+    figure: "43%",
+    title: "already use AI somewhere",
+    body: "Imaging, notes, a chatbot somebody installed. The tools are in the building.",
   },
   {
-    icon: CalendarX2,
-    title: "No-shows waste your time",
-    body: "You blocked the chair, prepped the team, and they just... didn't come. No call, no text, nothing.",
+    figure: "10%",
+    title: "use it at the front desk",
+    body: "Which is where the calls, the follow-up, and the missed revenue actually live.",
   },
   {
-    icon: Target,
-    title: "Agencies sell leads, not patients",
-    body: "You're paying for leads that never convert. High volume, high no-show, high frustration.",
+    figure: "32%",
+    title: "still report being overworked",
+    body: "Buying software didn't give anyone their afternoon back.",
   },
 ];
 
 export function Problem() {
   return (
-    <Section id="problem" tone="white">
+    <Section id="problem" tone="bone">
       <div className="flex flex-col items-center text-center">
         <Reveal>
-          <SectionPill icon={TriangleAlert}>Why Rally</SectionPill>
+          <PillBadge>The problem</PillBadge>
         </Reveal>
         <Reveal delay={60}>
           <SectionHeading
             className="mt-6"
-            title="Leads come in. Patients don't show up."
-            subtitle="You're spending thousands on ads. Your front desk is buried in follow-up. And half your consults are empty chairs."
+            title="The AI showed up. The front office never got any."
+            subtitle="Adoption looks great in a survey. Then a new patient texts at 7pm and hears back Thursday."
           />
         </Reveal>
       </div>
 
       <div className="mt-14 grid gap-5 md:grid-cols-3">
-        {pains.map((p, i) => (
+        {stats.map((s, i) => (
           <Reveal
-            key={p.title}
+            key={s.figure}
             delay={i * 90}
-            className="rounded-3xl border border-border bg-cream p-7 transition-colors hover:bg-muted"
+            className="lift rounded-3xl border border-border bg-white p-8"
           >
-            <span className="tint flex size-11 items-center justify-center rounded-2xl">
-              <p.icon className="size-5 text-primary" strokeWidth={2} />
-            </span>
-            <h3 className="mt-5 text-[19px] font-medium text-ink">{p.title}</h3>
-            <p className="mt-2.5 text-[14.5px] leading-relaxed text-warm-grey">{p.body}</p>
+            <p className="font-display text-[3.2rem] leading-none font-semibold text-primary">
+              {s.figure}
+            </p>
+            <h3 className="mt-4 text-[18px] font-semibold text-ink">{s.title}</h3>
+            <p className="mt-2.5 text-[15px] leading-relaxed text-warm-grey">{s.body}</p>
           </Reveal>
         ))}
       </div>
+
+      <Reveal delay={120} className="mt-8">
+        <p className="font-mono text-[11px] tracking-[0.12em] text-warm-grey uppercase">
+          Source: ADA Health Policy Institute, July 2026
+        </p>
+      </Reveal>
+
+      <Reveal delay={160} className="mt-12 flex flex-col items-start gap-3">
+        <Cta />
+        <p className="text-[14px] text-warm-grey">
+          Free, 25 minutes, and no deck. If we&apos;re not a fit we&apos;ll say so on the call.
+        </p>
+      </Reveal>
     </Section>
   );
 }
