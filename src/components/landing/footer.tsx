@@ -2,6 +2,8 @@ import { useState, type FormEvent } from "react";
 import { ArrowRight, Facebook, Instagram, Linkedin } from "lucide-react";
 import { toast } from "sonner";
 
+import rallyLogo from "@/assets/rally-logo.png.asset.json";
+
 const company = [
   { label: "Home", href: "#top" },
   { label: "About", href: "#top" },
@@ -40,7 +42,13 @@ export function Footer() {
       <div className="mx-auto w-full max-w-[1200px] px-5 py-16 sm:px-8 sm:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.3fr_0.7fr_0.7fr_1.2fr]">
           <div>
-            <p className="font-display text-[24px] font-semibold text-bone italic">Rally</p>
+            <img
+              src={rallyLogo.url}
+              alt="Rally"
+              width={1519}
+              height={961}
+              className="h-11 w-auto brightness-0 invert"
+            />
             <p className="mt-3 max-w-[30ch] text-[14px] leading-relaxed text-bone/55">
               AI agents that fill chairs for orthodontic practices
             </p>
