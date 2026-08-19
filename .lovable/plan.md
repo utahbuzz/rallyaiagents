@@ -1,6 +1,6 @@
 # Rally — full page rewrite (v5)
 
-Rebuild `/` as the new conversion-focused page for Rally (AI partner for dental + orthodontic practices), single goal: book the free 25-minute call. The current Flexfolio-style sections are replaced.
+Rebuild `/` as the new conversion-focused page for Rally (AI partner for dental + orthodontic practices), single goal: book the free 25-minute call. New sections and copy, but the Flexfolio layout language stays: 1200px container with dashed vertical guide lines, generous 96-128px section rhythm, pill badge + centered heading openers, bento grids, floating cards that overlap the next section, and the rounded-top full-width CTA band.
 
 Note: `rally-v5.html` was not attached, so all copy will be written to the voice spec in your brief — friendly, blunt, short sentences, one dry aside per section max, straight and sincere in Where We Draw The Line, the data/HIPAA answer, and the Happy Tooth numbers. No banned words, no emoji, no exclamation points.
 
