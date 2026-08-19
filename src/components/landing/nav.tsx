@@ -32,8 +32,14 @@ export function Nav() {
       )}
     >
       <div className="mx-auto flex h-[72px] w-full max-w-[1200px] items-center justify-between px-5 sm:px-8">
-        <a href="#top" className="font-display text-[22px] font-semibold text-primary italic">
-          Rally
+        <a href="#top" aria-label="Rally home" className="flex items-center">
+          <img
+            src={rallyLogo.url}
+            alt="Rally"
+            className="h-9 w-auto sm:h-10"
+            width={1519}
+            height={961}
+          />
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">
