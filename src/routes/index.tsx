@@ -1,25 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import { Buckets } from "@/components/landing/buckets";
-import { CaseStudy } from "@/components/landing/case-study";
-import { DrawTheLine } from "@/components/landing/draw-the-line";
 import { Faq } from "@/components/landing/faq";
 import { FinalCta } from "@/components/landing/final-cta";
-import { Fit } from "@/components/landing/fit";
 import { Footer } from "@/components/landing/footer";
 import { Hero } from "@/components/landing/hero";
-import { IcpRouter } from "@/components/landing/icp-router";
+import { HowItWorks } from "@/components/landing/how-it-works";
 import { Nav } from "@/components/landing/nav";
-import { Problem } from "@/components/landing/problem";
-import { RallyMethod } from "@/components/landing/rally-method";
-import { SixtyDay } from "@/components/landing/sixty-day";
 import { StickyCta } from "@/components/landing/sticky-cta";
 import { TrustBar } from "@/components/landing/trust-bar";
-import { WhatWeBuild } from "@/components/landing/what-we-build";
+import { WhatWeHelpWith } from "@/components/landing/what-we-help-with";
 
-const title = "Rally — AI that moves the front office in 60 days";
+const title = "Rally — AI partners for dental practices";
 const description =
-  "Rally builds and runs AI front-office workflows for dental and orthodontic practices. One number, 60 days, or you don't pay the retainer. Book a free 25-minute call.";
+  "Rally helps dental practices learn and adopt AI: a free 25-minute call, a live workshop with your team, then we build and run the workflows that save the most time.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -42,15 +35,8 @@ function LandingPage() {
       <main>
         <Hero />
         <TrustBar />
-        <IcpRouter />
-        <Problem />
-        <DrawTheLine />
-        <RallyMethod />
-        <Buckets />
-        <WhatWeBuild />
-        <SixtyDay />
-        <CaseStudy />
-        <Fit />
+        <HowItWorks />
+        <WhatWeHelpWith />
         <Faq />
         <FinalCta />
       </main>

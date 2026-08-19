@@ -4,17 +4,15 @@ import { toast } from "sonner";
 
 
 const company = [
-  { label: "The problem", href: "#problem" },
-  { label: "Our limits", href: "#limits" },
-  { label: "The Rally method", href: "#method" },
-  { label: "What we build", href: "#build" },
+  { label: "How it works", href: "#how" },
+  { label: "What we help with", href: "#help" },
 ];
 
 const product = [
-  { label: "Case study", href: "#case-study" },
   { label: "FAQ", href: "#faq" },
   { label: "Book a call", href: "#book" },
 ];
+
 
 
 const socials = [

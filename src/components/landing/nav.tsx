@@ -6,13 +6,11 @@ import { cn } from "@/lib/utils";
 import { CTA_LABEL } from "./primitives";
 
 const links = [
-  { label: "The Problem", href: "#problem" },
-  { label: "Our Limits", href: "#limits" },
-  { label: "The Rally Method", href: "#method" },
-  { label: "What We Build", href: "#build" },
-  { label: "Case Study", href: "#case-study" },
+  { label: "How it works", href: "#how" },
+  { label: "What we help with", href: "#help" },
   { label: "FAQ", href: "#faq" },
 ];
+
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);

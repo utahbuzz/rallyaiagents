@@ -8,20 +8,21 @@ import { CTA_LABEL } from "./primitives";
 const agenda = [
   {
     n: "01",
-    title: "Where it hurts",
-    body: "You tell us where the day gets hardest. We ask annoying follow-up questions.",
+    title: "How your day runs",
+    body: "You tell us where the time goes. We ask a few annoying follow-up questions.",
   },
   {
     n: "02",
-    title: "The four answers",
-    body: "Bucket, KPI, baseline, 60-day target. Written down while we're on the call.",
+    title: "Where AI would help",
+    body: "We point at the two or three spots worth starting with, and the ones that aren't.",
   },
   {
     n: "03",
-    title: "A yes or a no",
-    body: "If it's a fit, you get the audit scope. If it isn't, you get told that instead.",
+    title: "What happens next",
+    body: "If it's a fit, we book the workshop. If it isn't, we tell you that instead.",
   },
 ];
+
 
 const sizes = [
   { value: "solo_two", label: "Solo or two providers" },
@@ -84,12 +85,13 @@ export function FinalCta() {
               Book the call
             </span>
             <h2 className="mt-6 font-display text-[2.2rem] leading-[1.1] font-semibold text-white sm:text-[3rem]">
-              Twenty-five minutes, and you leave with your own numbers
+              Twenty-five minutes to find out where AI helps you
             </h2>
             <p className="mt-5 text-[17px] leading-relaxed text-white/80">
-              Even if you never hire us, you walk away knowing which bucket matters, what to measure,
-              and where you&apos;re starting from.
+              Free, no deck, no pressure. Even if you never hire us, you leave knowing where to
+              start.
             </p>
+
           </div>
 
           <div className="mt-12 grid gap-4 sm:grid-cols-3">
