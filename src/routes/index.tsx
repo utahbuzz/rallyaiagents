@@ -1,23 +1,25 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import { About } from "@/components/landing/about";
-import { Benefits } from "@/components/landing/benefits";
+import { Buckets } from "@/components/landing/buckets";
+import { CaseStudy } from "@/components/landing/case-study";
+import { DrawTheLine } from "@/components/landing/draw-the-line";
 import { Faq } from "@/components/landing/faq";
-import { Features } from "@/components/landing/features";
 import { FinalCta } from "@/components/landing/final-cta";
+import { Fit } from "@/components/landing/fit";
 import { Footer } from "@/components/landing/footer";
 import { Hero } from "@/components/landing/hero";
-import { HowItWorks } from "@/components/landing/how-it-works";
+import { IcpRouter } from "@/components/landing/icp-router";
 import { Nav } from "@/components/landing/nav";
-import { Pricing } from "@/components/landing/pricing";
 import { Problem } from "@/components/landing/problem";
-import { SetupHighlight } from "@/components/landing/setup-highlight";
-import { Testimonials } from "@/components/landing/testimonials";
+import { RallyMethod } from "@/components/landing/rally-method";
+import { SixtyDay } from "@/components/landing/sixty-day";
+import { StickyCta } from "@/components/landing/sticky-cta";
 import { TrustBar } from "@/components/landing/trust-bar";
+import { WhatWeBuild } from "@/components/landing/what-we-build";
 
-const title = "Rally — AI Agents That Fill Orthodontic Chairs";
+const title = "Rally — AI that moves the front office in 60 days";
 const description =
-  "Rally deploys AI agents for orthodontic practices: instant lead follow-up, 24/7 booking, reminders and reactivation. Pay per seated consult. Book a discovery call.";
+  "Rally builds and runs AI front-office workflows for dental and orthodontic practices. One number, 60 days, or you don't pay the retainer. Book a free 25-minute call.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,28 +32,30 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Index,
+  component: LandingPage,
 });
 
-function Index() {
+function LandingPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div id="top" className="min-h-screen bg-background">
       <Nav />
       <main>
         <Hero />
         <TrustBar />
-        <About />
+        <IcpRouter />
         <Problem />
-        <HowItWorks />
-        <Features />
-        <SetupHighlight />
-        <Benefits />
-        <Testimonials />
-        <Pricing />
+        <DrawTheLine />
+        <RallyMethod />
+        <Buckets />
+        <WhatWeBuild />
+        <SixtyDay />
+        <CaseStudy />
+        <Fit />
         <Faq />
         <FinalCta />
       </main>
       <Footer />
+      <StickyCta />
     </div>
   );
 }
