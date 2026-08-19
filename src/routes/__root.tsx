@@ -78,23 +78,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Rally — the AI partner for dental practices" },
+      { title: "Rally — AI agents for orthodontic practices" },
       {
         name: "description",
         content:
-          "Rally builds and runs the AI systems that catch every lead, answer every question, and book the consult for dental practices.",
+          "Rally deploys AI agents for orthodontic practices so every lead is followed up and every chair gets filled.",
       },
       { name: "author", content: "Rally" },
-      { property: "og:title", content: "Rally — the AI partner for dental practices" },
+      { property: "og:title", content: "Rally — AI agents for orthodontic practices" },
       {
         property: "og:description",
         content:
-          "Rally builds and runs the AI systems that catch every lead, answer every question, and book the consult for dental practices.",
+          "Rally deploys AI agents for orthodontic practices so every lead is followed up and every chair gets filled.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Rally — the AI partner for dental practices" },
-      { name: "twitter:description", content: "Rally builds and runs the AI systems that catch every lead, answer every question, and book the consult for dental practices." },
+      { name: "twitter:title", content: "Rally — AI agents for orthodontic practices" },
+      { name: "twitter:description", content: "Rally deploys AI agents for orthodontic practices so every lead is followed up and every chair gets filled." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e86f395d-e906-47b1-9642-cafa89d986d2/id-preview-093037b7--168493bc-6ea3-4b28-9c3c-97bdbefc2167.lovable.app-1785597404290.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e86f395d-e906-47b1-9642-cafa89d986d2/id-preview-093037b7--168493bc-6ea3-4b28-9c3c-97bdbefc2167.lovable.app-1785597404290.png" },
     ],
     links: [
       {
@@ -105,7 +107,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap",
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
@@ -139,11 +141,6 @@ function RootComponent() {
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
       <Toaster />
-      {/*
-        RILEY CHAT WIDGET MOUNT POINT — bottom-right, sitewide.
-        Paste the Riley embed script tag here. Do not remove or replace this slot:
-        the "Website chat" card in the What we build section refers to it as the live demo.
-      */}
     </QueryClientProvider>
   );
 }
