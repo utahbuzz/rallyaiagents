@@ -2,7 +2,6 @@ import { useState, type FormEvent } from "react";
 import { ArrowRight, Facebook, Instagram, Linkedin } from "lucide-react";
 import { toast } from "sonner";
 
-import rallyLogo from "@/assets/rally-logo.png.asset.json";
 
 const company = [
   { label: "The problem", href: "#problem" },
