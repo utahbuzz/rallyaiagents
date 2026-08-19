@@ -1,13 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import { Faq } from "@/components/landing/faq";
+import { Features } from "@/components/landing/features";
 import { FinalCta } from "@/components/landing/final-cta";
 import { Footer } from "@/components/landing/footer";
 import { Hero } from "@/components/landing/hero";
 import { HowItWorks } from "@/components/landing/how-it-works";
+import { Marquee } from "@/components/landing/marquee";
 import { Nav } from "@/components/landing/nav";
+import { Stats } from "@/components/landing/stats";
 import { StickyCta } from "@/components/landing/sticky-cta";
-import { TrustBar } from "@/components/landing/trust-bar";
+import { Testimonials } from "@/components/landing/testimonials";
 import { WhatWeHelpWith } from "@/components/landing/what-we-help-with";
 
 const title = "Rally — AI partners for dental practices";
@@ -34,9 +37,14 @@ function LandingPage() {
       <Nav />
       <main>
         <Hero />
-        <TrustBar />
+        <div className="pt-24 sm:pt-28">
+          <Marquee />
+        </div>
+        <Stats />
         <HowItWorks />
+        <Features />
         <WhatWeHelpWith />
+        <Testimonials />
         <Faq />
         <FinalCta />
       </main>
