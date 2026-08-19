@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Menu, X } from "lucide-react";
 
+import rallyLogo from "@/assets/rally-logo.png.asset.json";
 import { cn } from "@/lib/utils";
 
 const links = [
