@@ -168,8 +168,9 @@
 
 @utility hero-glow {
   background:
-    radial-gradient(60% 50% at 50% 0%, color-mix(in srgb, #6b2332 7%, transparent), transparent 70%),
-    radial-gradient(40% 40% at 85% 20%, color-mix(in srgb, #6b2332 5%, transparent), transparent 70%),
+    radial-gradient(65% 55% at 50% 0%, color-mix(in srgb, #6b2332 10%, transparent), transparent 70%),
+    radial-gradient(45% 45% at 85% 15%, color-mix(in srgb, #6b2332 8%, transparent), transparent 70%),
+    radial-gradient(35% 35% at 15% 25%, color-mix(in srgb, #6b2332 5%, transparent), transparent 70%),
     linear-gradient(180deg, var(--cream), #fff 65%);
 }
 
