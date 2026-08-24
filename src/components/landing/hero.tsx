@@ -4,7 +4,7 @@ import avatarChelsea from "@/assets/avatar-chelsea.jpg";
 import avatarJames from "@/assets/avatar-james.jpg";
 import avatarSarah from "@/assets/avatar-sarah.jpg";
 
-import { DashboardMock } from "./mocks";
+import { HeroWidget } from "./hero-widget";
 import { Cta, PillBadge, Reveal } from "./primitives";
 
 const reassurances = ["Free first call", "No software to buy", "Plain English, no jargon"];
@@ -89,7 +89,7 @@ export function Hero() {
             delay={320}
             className="float-card relative z-10 mt-14 w-full max-w-[960px] translate-y-12 rounded-[1.8rem] border border-border bg-white/70 p-3 backdrop-blur sm:mt-16 sm:p-4"
           >
-            <DashboardMock />
+            <HeroWidget />
           </Reveal>
         </div>
       </div>
