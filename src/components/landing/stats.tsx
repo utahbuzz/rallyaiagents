@@ -61,14 +61,15 @@ export function Stats() {
         <Reveal>
           <MonoLabel>About Rally</MonoLabel>
           <h2 className="mt-6 text-[2rem] leading-[1.12] font-semibold text-ink sm:text-[2.5rem]">
-            Most practices don&apos;t need more software. They need someone to show them.
+            Doing nothing about AI is a decision. It&apos;s just the expensive one.
           </h2>
         </Reveal>
         <Reveal delay={80}>
           <p className="text-[17px] leading-relaxed text-warm-grey">
-            Rally teaches your team what AI can do in a dental practice, then builds the parts worth
-            building. No enterprise software to buy, no year-long contract, no jargon. We work on
-            your real tasks, on your screen, with your team in the room.
+            The practices already using it are pulling ahead on scheduling, follow-up, and
+            unscheduled treatment. Rally teaches your team what AI can do in a dental practice, then
+            builds the parts worth building. No enterprise software to buy, no year-long contract,
+            no jargon. We work on your real tasks, on your screen, with your team in the room.
           </p>
           <div className="mt-10 grid gap-8 sm:grid-cols-3">
             {stats.map((s) => (
