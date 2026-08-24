@@ -9,12 +9,12 @@ const stats = [
 ];
 
 const tags = [
-  "General dentistry",
   "Orthodontics",
   "Pediatric",
-  "Multi-location",
   "Front desk teams",
   "Practice owners",
+  "General dentistry",
+  "Multi-location",
 ];
 
 function Counter({ to, suffix }: { to: number; suffix: string }) {
