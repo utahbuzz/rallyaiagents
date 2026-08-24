@@ -25,11 +25,15 @@ export function Marquee() {
         <ul className="marquee-track flex w-max items-center gap-12 sm:gap-16">
           {row.map((c, i) => (
             <li key={`${c.name}-${i}`} className="shrink-0">
-              <img
-                src={c.src}
-                alt={c.name}
-                loading="lazy"
-                className={`${c.className} w-auto opacity-45 transition-all duration-300 hover:opacity-100`}
+              <span
+                role="img"
+                aria-label={c.name}
+                className={`${c.className} logo-mask block bg-ink opacity-40 transition-all duration-300 hover:bg-primary hover:opacity-100`}
+                style={{
+                  ["--logo" as string]: `url("${c.src}")`,
+                  aspectRatio: "auto",
+                  width: `calc(var(--logo-ratio) * 1px)`,
+                }}
               />
             </li>
           ))}
