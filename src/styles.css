@@ -258,6 +258,16 @@
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
 
+/* Client logos rendered as single-color masks so they share one brand weight */
+@utility logo-mark {
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .marquee-track {
     animation: none;
