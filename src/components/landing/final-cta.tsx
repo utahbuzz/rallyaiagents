@@ -9,17 +9,17 @@ const agenda = [
   {
     n: "01",
     title: "How your day runs",
-    body: "You tell us where the time goes. We ask a few annoying follow-up questions.",
+    body: "You tell us where the time goes. We ask a few annoying questions.",
   },
   {
     n: "02",
     title: "Where AI would help",
-    body: "We point at the two or three spots worth starting with, and the ones that aren't.",
+    body: "Two or three spots worth starting with. Also the ones that aren't.",
   },
   {
     n: "03",
     title: "What happens next",
-    body: "If it's a fit, we book the workshop. If it isn't, we tell you that instead.",
+    body: "If it's a fit, we book the workshop. If it isn't, we say so.",
   },
 ];
 
@@ -85,11 +85,11 @@ export function FinalCta() {
               Book the call
             </span>
             <h2 className="mt-6 font-display text-[2.2rem] leading-[1.1] font-semibold text-white sm:text-[3rem]">
-              Twenty-five minutes to find out where AI helps you
+              See if Rally is a fit for your practice
             </h2>
             <p className="mt-5 text-[17px] leading-relaxed text-white/80">
-              Free, no deck, no pressure. Even if you never hire us, you leave knowing where to
-              start.
+              Twenty-five minutes, free, no deck. Worst case you hang up knowing exactly where to
+              start without us.
             </p>
 
           </div>
@@ -113,10 +113,10 @@ export function FinalCta() {
                   <Check className="size-5 text-primary" strokeWidth={2.5} />
                 </span>
                 <h3 className="font-display text-[1.7rem] leading-snug font-semibold text-ink">
-                  Got it. We&apos;ll reach out within one business day.
+                  Got it. You&apos;ll hear from us within one business day.
                 </h3>
                 <p className="text-[15.5px] leading-relaxed text-warm-grey">
-                  You&apos;ll get a short note with a couple of times. Nothing else, no sequence.
+                  One short note with a couple of times. No drip sequence, we promise.
                 </p>
               </div>
             ) : (

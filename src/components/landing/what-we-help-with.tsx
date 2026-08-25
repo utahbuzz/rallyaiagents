@@ -2,28 +2,28 @@ import { PillBadge, Reveal, Section, SectionHeading } from "./primitives";
 
 const items = [
   {
-    title: "Answering after-hours questions",
-    body: "New patients text at 8pm. They get a real answer instead of a callback on Thursday.",
+    title: "After-hours questions",
+    body: "New patients text at 8pm. They get an answer, not a callback on Thursday.",
   },
   {
-    title: "Missed calls and voicemails",
-    body: "Every missed call gets a text back in seconds so the caller doesn't book somewhere else.",
+    title: "Missed calls",
+    body: "A text goes back in seconds, before the caller tries the office down the street.",
   },
   {
-    title: "Follow-up that never happens",
-    body: "Unscheduled treatment and cold leads get followed up on without anyone remembering to.",
+    title: "Follow-up nobody does",
+    body: "Unscheduled treatment gets chased without anyone remembering to chase it.",
   },
   {
     title: "Insurance and paperwork",
-    body: "The repetitive checking and typing your front desk does between patients.",
+    body: "The checking and typing your front desk squeezes in between patients.",
   },
   {
-    title: "Notes and admin writing",
-    body: "Letters, summaries, referral notes, and the emails nobody wants to write.",
+    title: "Notes and writing",
+    body: "Letters, summaries, referrals, and the emails everyone keeps postponing.",
   },
   {
     title: "Teaching your team",
-    body: "The biggest win is usually just showing people what these tools can already do.",
+    body: "Half the win is just showing people what these tools already do.",
   },
 ];
 
@@ -37,8 +37,8 @@ export function WhatWeHelpWith() {
         <Reveal delay={60}>
           <SectionHeading
             className="mt-6"
-            title="The boring parts of the day"
-            subtitle="We start with whatever is costing you the most time. Usually it's one of these."
+            title="What's eating your day?"
+            subtitle="We start with whatever costs you the most time. It's usually one of these six."
           />
         </Reveal>
       </div>

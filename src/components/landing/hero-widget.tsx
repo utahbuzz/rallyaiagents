@@ -39,10 +39,10 @@ const topics: Topic[] = [
         { from: "them", t: "Chipped a tooth. Anything tomorrow?" },
       ],
     },
-    does: "Texts the caller back the second the phone goes unanswered, then holds the conversation until someone at the desk is free.",
+    does: "Texts the caller back the second nobody picks up, then holds the conversation until your desk is free.",
     changes: "The caller stops dialing the next office in the search results.",
     competitors:
-      "Practices doing this treat a missed call as a lead, not a voicemail somebody clears on Monday.",
+      "They treat a missed call as a lead, not a voicemail somebody clears on Monday.",
   },
   {
     id: "after-hours",
@@ -57,10 +57,10 @@ const topics: Topic[] = [
         { from: "them", t: "9:20 works." },
       ],
     },
-    does: "Answers the common questions — insurance, hours, pricing, first visit — and puts real openings in front of the patient.",
-    changes: "Evening and weekend enquiries turn into Monday appointments instead of nothing.",
+    does: "Answers the usual questions — insurance, hours, pricing, first visit — and offers real openings.",
+    changes: "Evening and weekend questions turn into Monday appointments.",
     competitors:
-      "The offices taking your after-hours callers answer in seconds, at 9pm, without paying anyone to sit there.",
+      "They answer at 9pm without paying anyone to sit by the phone at 9pm.",
   },
   {
     id: "unscheduled",
@@ -78,10 +78,9 @@ const topics: Topic[] = [
         { from: "them", t: "Yes please, I forgot about that." },
       ],
     },
-    does: "Works through the treatment nobody booked and follows up patient by patient, in your tone, until they answer.",
+    does: "Follows up patient by patient on treatment nobody booked, in your tone, until they answer.",
     changes: "Production you already diagnosed stops aging in a report.",
-    competitors:
-      "This is the quietest thing your competitors are doing, and usually the most profitable.",
+    competitors: "The quietest thing your competitors do, and usually the most profitable.",
   },
   {
     id: "insurance",
@@ -96,10 +95,9 @@ const topics: Topic[] = [
         { from: "note", t: "Your team starts the day with the exceptions, not the list." },
       ],
     },
-    does: "Runs verification and pulls the numbers into one place, then tells your team only about the ones that need a person.",
-    changes: "Front desk spends the morning on patients instead of hold music.",
-    competitors:
-      "Groups with a strong margin got there partly by refusing to pay staff to sit on the phone with payers.",
+    does: "Verifies overnight, puts the numbers in one place, and flags only the ones needing a person.",
+    changes: "Your front desk spends the morning on patients instead of hold music.",
+    competitors: "Nobody with a healthy margin pays staff to listen to a payer's hold music.",
   },
   {
     id: "recall",
@@ -114,9 +112,9 @@ const topics: Topic[] = [
         { from: "them", t: "Book it." },
       ],
     },
-    does: "Finds who is overdue, reaches out on the channel they actually reply to, and keeps nudging politely.",
-    changes: "The hygiene schedule fills without anyone dreading the call list.",
-    competitors: "Full hygiene columns are rarely luck. They are usually follow-up nobody skipped.",
+    does: "Finds who's overdue, texts them where they actually reply, and keeps nudging politely.",
+    changes: "Hygiene fills without anyone dreading the call list.",
+    competitors: "A full hygiene column is rarely luck. It's follow-up nobody skipped.",
   },
   {
     id: "admin",
@@ -131,10 +129,9 @@ const topics: Topic[] = [
         { from: "note", t: "You read it, fix a line, send it. Done before lunch." },
       ],
     },
-    does: "Drafts the letters, summaries, post-op instructions, and replies your team keeps rewriting from scratch.",
-    changes: "The paperwork tail after each day gets short enough to finish at the office.",
-    competitors:
-      "Doctors who stopped taking admin home did not get faster. They stopped writing first drafts.",
+    does: "Drafts the letters, summaries, post-op instructions, and replies your team retypes weekly.",
+    changes: "The paperwork tail gets short enough to finish before you leave.",
+    competitors: "Doctors who stopped taking admin home didn't get faster. They stopped writing first drafts.",
   },
 ];
 
@@ -177,7 +174,7 @@ export function HeroWidget() {
           </p>
           <p className="mt-1.5 text-[13.5px] leading-relaxed text-warm-grey">
             Pick where your day gets hardest. This is what the practices ahead of you already
-            automated.
+            handed off.
           </p>
         </div>
         <span className="tint rounded-full px-3 py-1 font-mono text-[10.5px] tracking-[0.1em] text-primary uppercase">
@@ -277,7 +274,7 @@ export function HeroWidget() {
 
       <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-dashed border-border pt-4">
         <p className="text-[13.5px] text-warm-grey">
-          Not sure which one is yours? That is the first call.
+          Not sure which one is yours? That&apos;s the first call.
         </p>
         <a
           href="#book"

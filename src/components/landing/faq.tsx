@@ -6,27 +6,31 @@ import { Cta, PillBadge, Reveal, Section } from "./primitives";
 const items = [
   {
     q: "Do I need to know anything about AI?",
-    a: "No. That's the point of us. We explain it in plain English and show you on your own work.",
+    a: "No. That's the whole reason we exist. Plain English, on your own work, no acronyms.",
   },
   {
-    q: "What does it cost?",
-    a: "The first call is free. The workshop is a one-time fee we quote on that call. If you want us to keep going after that, it's a monthly retainer, month to month.",
+    q: "What's this going to cost me?",
+    a: "First call is free. The workshop is a one-time fee we quote on that call. After that it's a monthly retainer, month to month.",
   },
   {
-    q: "How much of my time does this take?",
-    a: "Twenty-five minutes for the first call. The workshop is a couple of hours with your team. After that we do the work and report back.",
+    q: "How much of my time is this going to take?",
+    a: "Twenty-five minutes to start. A couple of hours for the workshop. Then we do the work and report back.",
   },
   {
     q: "Is patient data safe?",
-    a: "Yes. We work under a signed BAA, keep data in your existing systems, and never use patient information to train models.",
+    a: "Yes. Signed BAA, data stays in your existing systems, and patient information never trains a model.",
   },
   {
-    q: "Does the AI make clinical decisions?",
-    a: "Never. Clinical judgment stays with your licensed team. Anything clinical is reviewed by a person first.",
+    q: "Does the AI make clinical calls?",
+    a: "Never. Clinical judgment stays with your licensed team. A person reviews anything clinical first.",
+  },
+  {
+    q: "What if we tried AI and it flopped?",
+    a: "Usually the tool was fine and nobody showed the team how to use it. That's the part we fix first.",
   },
   {
     q: "Will my team feel replaced?",
-    a: "The work we take is the work they complain about. Nobody has asked us for their voicemail backlog back.",
+    a: "We take the work they complain about. Nobody has asked for their voicemail backlog back.",
   },
 ];
 
@@ -39,7 +43,7 @@ export function Faq() {
         <Reveal>
           <PillBadge>FAQ</PillBadge>
           <h2 className="mt-6 text-[2rem] leading-[1.12] font-semibold text-ink sm:text-[2.6rem]">
-            Questions we get on the first call
+            What everyone asks on the first call
           </h2>
           <p className="mt-4 text-[16px] leading-relaxed text-warm-grey">
             If yours isn&apos;t here, ask it live. It&apos;s a conversation, not a presentation.

@@ -7,7 +7,7 @@ import avatarSarah from "@/assets/avatar-sarah.jpg";
 import { HeroWidget } from "./hero-widget";
 import { Cta, PillBadge, Reveal } from "./primitives";
 
-const reassurances = ["Free first call", "No software to buy", "Plain English, no jargon"];
+const reassurances = ["Free first call", "Nothing to buy", "No jargon"];
 const avatars = [avatarSarah, avatarChelsea, avatarJames];
 
 export function Hero() {
@@ -30,14 +30,14 @@ export function Hero() {
 
           <Reveal delay={80}>
             <h1 className="mt-7 max-w-[24ch] text-[2.5rem] leading-[1.06] font-semibold text-ink sm:text-[3.6rem] lg:text-[4rem]">
-              We help your practice actually use AI.
+              Not sure where AI fits in your practice? Let&apos;s find out.
             </h1>
           </Reveal>
 
           <Reveal delay={140}>
             <p className="mt-6 max-w-[52ch] text-[17px] leading-relaxed text-warm-grey sm:text-[18px]">
-              We teach your team what AI can do for a dental practice, then build the parts that
-              save you the most time. Start with one free 25-minute call.
+              Your team learns it. We build the rest. It starts with one free 25-minute call, which
+              is less time than you spent on hold with a payer today.
             </p>
           </Reveal>
 
