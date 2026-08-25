@@ -31,8 +31,8 @@ export function HowItWorks() {
         <Reveal delay={60}>
           <SectionHeading
             className="mt-6"
-            title="Three steps. You can stop after any of them."
-            subtitle="Every practice is different. The process is the same."
+            title="How does this actually work?"
+            subtitle="Three steps, and you can stop after any of them. Every practice is different. The process isn't."
           />
         </Reveal>
       </div>
