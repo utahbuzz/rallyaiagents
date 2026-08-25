@@ -174,7 +174,7 @@ export function HeroWidget() {
           </p>
           <p className="mt-1.5 text-[13.5px] leading-relaxed text-warm-grey">
             Pick where your day gets hardest. This is what the practices ahead of you already
-            automated.
+            handed off.
           </p>
         </div>
         <span className="tint rounded-full px-3 py-1 font-mono text-[10.5px] tracking-[0.1em] text-primary uppercase">
