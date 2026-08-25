@@ -43,7 +43,7 @@ export function Faq() {
         <Reveal>
           <PillBadge>FAQ</PillBadge>
           <h2 className="mt-6 text-[2rem] leading-[1.12] font-semibold text-ink sm:text-[2.6rem]">
-            Questions we get on the first call
+            What everyone asks on the first call
           </h2>
           <p className="mt-4 text-[16px] leading-relaxed text-warm-grey">
             If yours isn&apos;t here, ask it live. It&apos;s a conversation, not a presentation.
