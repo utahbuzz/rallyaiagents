@@ -28,7 +28,7 @@ export function Features() {
           <SectionHeading
             className="mt-6"
             title="Teach first, build second"
-            subtitle="Same two moves for every practice. What we build is the part that changes."
+            subtitle="Same two moves at every practice. Only what we build changes."
           />
         </Reveal>
       </div>
