@@ -53,9 +53,12 @@ export function FootballFinalCta() {
             ))}
           </div>
 
-          <Reveal id="fit-form" className="float-card mt-12 max-w-2xl" as="div">
-            <FootballLeadForm />
-          </Reveal>
+          <div id="fit-form" className="mt-12 max-w-2xl scroll-mt-28">
+            <Reveal className="float-card">
+              <FootballLeadForm />
+            </Reveal>
+          </div>
+
         </div>
       </div>
     </section>
