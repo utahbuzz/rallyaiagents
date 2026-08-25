@@ -129,10 +129,9 @@ const topics: Topic[] = [
         { from: "note", t: "You read it, fix a line, send it. Done before lunch." },
       ],
     },
-    does: "Drafts the letters, summaries, post-op instructions, and replies your team keeps rewriting from scratch.",
-    changes: "The paperwork tail after each day gets short enough to finish at the office.",
-    competitors:
-      "Doctors who stopped taking admin home did not get faster. They stopped writing first drafts.",
+    does: "Drafts the letters, summaries, post-op instructions, and replies your team retypes weekly.",
+    changes: "The paperwork tail gets short enough to finish before you leave.",
+    competitors: "Doctors who stopped taking admin home didn't get faster. They stopped writing first drafts.",
   },
 ];
 
