@@ -7,7 +7,7 @@ import avatarSarah from "@/assets/avatar-sarah.jpg";
 import { HeroWidget } from "./hero-widget";
 import { Cta, PillBadge, Reveal } from "./primitives";
 
-const reassurances = ["Free first call", "No software to buy", "Plain English, no jargon"];
+const reassurances = ["Free first call", "Nothing to buy", "No jargon"];
 const avatars = [avatarSarah, avatarChelsea, avatarJames];
 
 export function Hero() {
