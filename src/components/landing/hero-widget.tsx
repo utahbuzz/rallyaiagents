@@ -95,10 +95,9 @@ const topics: Topic[] = [
         { from: "note", t: "Your team starts the day with the exceptions, not the list." },
       ],
     },
-    does: "Runs verification and pulls the numbers into one place, then tells your team only about the ones that need a person.",
-    changes: "Front desk spends the morning on patients instead of hold music.",
-    competitors:
-      "Groups with a strong margin got there partly by refusing to pay staff to sit on the phone with payers.",
+    does: "Verifies overnight, puts the numbers in one place, and flags only the ones needing a person.",
+    changes: "Your front desk spends the morning on patients instead of hold music.",
+    competitors: "Nobody with a healthy margin pays staff to listen to a payer's hold music.",
   },
   {
     id: "recall",
