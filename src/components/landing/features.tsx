@@ -4,14 +4,14 @@ import { CallMock, ChatMock, DashboardMock } from "./mocks";
 const rows = [
   {
     label: "Learn",
-    title: "Your team learns AI on your own work",
-    body: "In the workshop we open your real tasks — recall lists, insurance notes, patient emails — and do them with AI while your team watches and tries it. Everyone leaves able to use it on Monday.",
+    title: "Your team learns on your own work",
+    body: "We open your real tasks — recall lists, insurance notes, patient emails — and do them with AI while your team tries it. No slides.",
     mock: <DashboardMock />,
   },
   {
     label: "Adopt",
-    title: "Then we build the parts that save the most time",
-    body: "After the workshop we build and run the workflows nobody at your practice has time to build. Missed-call texts, after-hours answers, follow-up that actually happens.",
+    title: "Then we build what saves the most time",
+    body: "Missed-call texts, after-hours answers, follow-up that actually happens. We build it and we run it.",
     mock: <ChatMock />,
     flip: true,
   },
