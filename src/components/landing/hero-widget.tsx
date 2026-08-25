@@ -78,10 +78,9 @@ const topics: Topic[] = [
         { from: "them", t: "Yes please, I forgot about that." },
       ],
     },
-    does: "Works through the treatment nobody booked and follows up patient by patient, in your tone, until they answer.",
+    does: "Follows up patient by patient on treatment nobody booked, in your tone, until they answer.",
     changes: "Production you already diagnosed stops aging in a report.",
-    competitors:
-      "This is the quietest thing your competitors are doing, and usually the most profitable.",
+    competitors: "The quietest thing your competitors do, and usually the most profitable.",
   },
   {
     id: "insurance",
