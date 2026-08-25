@@ -9,17 +9,17 @@ const agenda = [
   {
     n: "01",
     title: "How your day runs",
-    body: "You tell us where the time goes. We ask a few annoying follow-up questions.",
+    body: "You tell us where the time goes. We ask a few annoying questions.",
   },
   {
     n: "02",
     title: "Where AI would help",
-    body: "We point at the two or three spots worth starting with, and the ones that aren't.",
+    body: "Two or three spots worth starting with. Also the ones that aren't.",
   },
   {
     n: "03",
     title: "What happens next",
-    body: "If it's a fit, we book the workshop. If it isn't, we tell you that instead.",
+    body: "If it's a fit, we book the workshop. If it isn't, we say so.",
   },
 ];
 
