@@ -15,7 +15,7 @@ import { WhatWeHelpWith } from "@/components/landing/what-we-help-with";
 
 const title = "Rally — AI partners for dental practices";
 const description =
-  "Rally helps dental practices learn and adopt AI: a free 25-minute call, a live workshop with your team, then we build and run the workflows that save the most time.";
+  "Not sure where AI fits in your dental practice? Rally teaches your team, then builds what saves the most time. Start with a free 25-minute call.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
