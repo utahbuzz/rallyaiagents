@@ -113,10 +113,10 @@ export function FinalCta() {
                   <Check className="size-5 text-primary" strokeWidth={2.5} />
                 </span>
                 <h3 className="font-display text-[1.7rem] leading-snug font-semibold text-ink">
-                  Got it. We&apos;ll reach out within one business day.
+                  Got it. You&apos;ll hear from us within one business day.
                 </h3>
                 <p className="text-[15.5px] leading-relaxed text-warm-grey">
-                  You&apos;ll get a short note with a couple of times. Nothing else, no sequence.
+                  One short note with a couple of times. No drip sequence, we promise.
                 </p>
               </div>
             ) : (
