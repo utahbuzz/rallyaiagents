@@ -85,11 +85,11 @@ export function FinalCta() {
               Book the call
             </span>
             <h2 className="mt-6 font-display text-[2.2rem] leading-[1.1] font-semibold text-white sm:text-[3rem]">
-              Twenty-five minutes to find out where AI helps you
+              See if Rally is a fit for your practice
             </h2>
             <p className="mt-5 text-[17px] leading-relaxed text-white/80">
-              Free, no deck, no pressure. Even if you never hire us, you leave knowing where to
-              start.
+              Twenty-five minutes, free, no deck. Worst case you hang up knowing exactly where to
+              start without us.
             </p>
 
           </div>
