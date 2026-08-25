@@ -57,10 +57,10 @@ const topics: Topic[] = [
         { from: "them", t: "9:20 works." },
       ],
     },
-    does: "Answers the common questions — insurance, hours, pricing, first visit — and puts real openings in front of the patient.",
-    changes: "Evening and weekend enquiries turn into Monday appointments instead of nothing.",
+    does: "Answers the usual questions — insurance, hours, pricing, first visit — and offers real openings.",
+    changes: "Evening and weekend questions turn into Monday appointments.",
     competitors:
-      "The offices taking your after-hours callers answer in seconds, at 9pm, without paying anyone to sit there.",
+      "They answer at 9pm without paying anyone to sit by the phone at 9pm.",
   },
   {
     id: "unscheduled",
