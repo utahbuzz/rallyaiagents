@@ -5,19 +5,19 @@ const steps = [
     n: "01",
     title: "A free 25-minute call",
     price: "Free",
-    body: "We learn how your practice runs and where AI would help the most. You leave with a short list of ideas, even if you stop here.",
+    body: "We ask how your practice actually runs. You leave with a short list of where AI would help, even if you never hire us.",
   },
   {
     n: "02",
     title: "A live workshop with your team",
     price: "Paid, one-time",
-    body: "We sit down with you and your team and work through your real tasks with AI, on your screen. Everyone leaves able to use it on Monday.",
+    body: "A couple of hours on your real tasks, on your screen, with your team. Everyone can use it Monday morning.",
   },
   {
     n: "03",
     title: "We stay on as your AI partner",
     price: "Monthly",
-    body: "We build the workflows you don't have time to build, keep training your team, and stay on call as new tools show up. Month to month.",
+    body: "We build the workflows nobody has time to build and keep your team current. Month to month, so we have to keep earning it.",
   },
 ];
 
