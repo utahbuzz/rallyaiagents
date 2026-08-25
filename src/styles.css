@@ -70,7 +70,16 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Football page (dark surface) */
+  --color-night: var(--night);
+  --color-night-raised: var(--night-raised);
+  --color-night-line: var(--night-line);
+  --color-chalk: var(--chalk);
+  --color-chalk-muted: var(--chalk-muted);
+  --color-brand-bright: var(--brand-bright);
 }
+
 
 :root {
   --radius: 1.25rem;
@@ -118,7 +127,16 @@
   --sidebar-accent-foreground: oklch(0.3703 0.1029 11.11);
   --sidebar-border: oklch(0.9137 0.0198 87.52);
   --sidebar-ring: oklch(0.3703 0.1029 11.11);
+
+  /* Football page (dark surface) */
+  --night: oklch(0.1553 0.0034 106.5);
+  --night-raised: oklch(0.2166 0.0057 106.87);
+  --night-line: oklch(0.2856 0.0064 106.6);
+  --chalk: oklch(0.9588 0.0127 86.83);
+  --chalk-muted: oklch(0.7233 0.0128 89);
+  --brand-bright: oklch(0.5266 0.1449 15.5);
 }
+
 
 @layer base {
   * {
@@ -298,5 +316,46 @@
 
   html {
     scroll-behavior: auto;
+  }
+}
+
+/* ===== Football page utilities ===== */
+@utility gridiron-glow {
+  background:
+    radial-gradient(70% 60% at 50% -5%, color-mix(in srgb, #8b2f42 26%, transparent), transparent 70%),
+    radial-gradient(45% 45% at 88% 10%, color-mix(in srgb, #6b2332 20%, transparent), transparent 72%),
+    linear-gradient(180deg, color-mix(in srgb, #6b2332 6%, var(--night)), var(--night) 70%);
+}
+
+@utility yard-lines {
+  background-image: repeating-linear-gradient(
+    90deg,
+    color-mix(in srgb, #f5f1e8 8%, transparent) 0 1px,
+    transparent 1px 88px
+  );
+}
+
+@utility brand-tint-dark {
+  background-color: color-mix(in srgb, #8b2f42 16%, transparent);
+}
+
+@utility border-brand-dark {
+  border-color: color-mix(in srgb, #8b2f42 34%, transparent);
+}
+
+@utility lift-dark {
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+  &:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, #8b2f42 45%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lift-dark:hover {
+    transform: none;
   }
 }
