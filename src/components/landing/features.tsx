@@ -57,8 +57,8 @@ export function Features() {
               The first thing most practices fix
             </h3>
             <p className="mt-4 text-[16.5px] leading-relaxed text-warm-grey">
-              A missed call is a patient booking somewhere else. This is usually the cheapest thing
-              to turn on and the easiest to notice.
+              A missed call is a patient booking somewhere else. Cheapest thing to turn on, and the
+              one your front desk notices by Wednesday.
             </p>
           </Reveal>
           <Reveal delay={80}>
