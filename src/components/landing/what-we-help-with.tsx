@@ -37,8 +37,8 @@ export function WhatWeHelpWith() {
         <Reveal delay={60}>
           <SectionHeading
             className="mt-6"
-            title="The boring parts of the day"
-            subtitle="We start with whatever is costing you the most time. Usually it's one of these."
+            title="What's eating your day?"
+            subtitle="We start with whatever costs you the most time. It's usually one of these six."
           />
         </Reveal>
       </div>
