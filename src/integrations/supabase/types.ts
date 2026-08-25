@@ -14,6 +14,39 @@ export type Database = {
   }
   public: {
     Tables: {
+      football_leads: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          name: string
+          pain_point: string
+          phone: string | null
+          program: string
+          role: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          name: string
+          pain_point: string
+          phone?: string | null
+          program: string
+          role: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          name?: string
+          pain_point?: string
+          phone?: string | null
+          program?: string
+          role?: string
+        }
+        Relationships: []
+      }
       leads: {
         Row: {
           contact: string
