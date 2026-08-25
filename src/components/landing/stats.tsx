@@ -209,10 +209,10 @@ export function Stats() {
           </div>
 
           <p className="mt-9 border-t border-dashed border-border pt-6 text-[13.5px] leading-relaxed text-warm-grey">
-            Estimates, not promises. Built on published benchmarks: small healthcare practices miss
-            roughly one in four inbound calls (Solutionreach), and we only count half of those as
-            recoverable and 35% of those as starts. Your numbers will be different. Working out
-            which ones actually move is what the first call is for.{" "}
+            Estimates, not promises. Benchmark: small healthcare practices miss about one in four
+            inbound calls (Solutionreach). We count half of those as recoverable and 35% of those as
+            starts, which is deliberately conservative. Your numbers will be different. Sorting out
+            which ones move is what the first call is for.{" "}
             <a href="#book" className="text-primary underline underline-offset-4">
               Book the call
             </a>
