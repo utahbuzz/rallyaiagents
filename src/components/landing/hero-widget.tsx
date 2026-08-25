@@ -112,9 +112,9 @@ const topics: Topic[] = [
         { from: "them", t: "Book it." },
       ],
     },
-    does: "Finds who is overdue, reaches out on the channel they actually reply to, and keeps nudging politely.",
-    changes: "The hygiene schedule fills without anyone dreading the call list.",
-    competitors: "Full hygiene columns are rarely luck. They are usually follow-up nobody skipped.",
+    does: "Finds who's overdue, texts them where they actually reply, and keeps nudging politely.",
+    changes: "Hygiene fills without anyone dreading the call list.",
+    competitors: "A full hygiene column is rarely luck. It's follow-up nobody skipped.",
   },
   {
     id: "admin",
