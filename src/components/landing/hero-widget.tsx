@@ -274,7 +274,7 @@ export function HeroWidget() {
 
       <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-dashed border-border pt-4">
         <p className="text-[13.5px] text-warm-grey">
-          Not sure which one is yours? That is the first call.
+          Not sure which one is yours? That&apos;s the first call.
         </p>
         <a
           href="#book"
