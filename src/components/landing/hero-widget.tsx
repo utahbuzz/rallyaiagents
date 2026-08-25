@@ -39,10 +39,10 @@ const topics: Topic[] = [
         { from: "them", t: "Chipped a tooth. Anything tomorrow?" },
       ],
     },
-    does: "Texts the caller back the second the phone goes unanswered, then holds the conversation until someone at the desk is free.",
+    does: "Texts the caller back the second nobody picks up, then holds the conversation until your desk is free.",
     changes: "The caller stops dialing the next office in the search results.",
     competitors:
-      "Practices doing this treat a missed call as a lead, not a voicemail somebody clears on Monday.",
+      "They treat a missed call as a lead, not a voicemail somebody clears on Monday.",
   },
   {
     id: "after-hours",
