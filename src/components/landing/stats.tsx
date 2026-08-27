@@ -105,7 +105,7 @@ export function Stats() {
     <Section id="about" tone="white">
       <div className="grid gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
         <Reveal>
-          <MonoLabel>About Rally</MonoLabel>
+          <MonoLabel>WHY RALLY</MonoLabel>
           <h2 className="mt-6 text-[2rem] leading-[1.12] font-semibold text-ink sm:text-[2.5rem]">
             Doing nothing about AI is a decision. It&apos;s just the expensive one.
           </h2>
