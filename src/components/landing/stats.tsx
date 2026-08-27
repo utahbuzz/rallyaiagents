@@ -142,7 +142,7 @@ export function Stats() {
 
       <Reveal delay={120} className="mt-14">
         <div className="rounded-3xl border border-border bg-bone p-6 sm:p-9">
-          <MonoLabel>What this could look like for your practice</MonoLabel>
+          <MonoLabel>What that partnership could free up</MonoLabel>
 
           <div className="mt-7 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:gap-14">
             <div className="space-y-7">
