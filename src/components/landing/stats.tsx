@@ -212,12 +212,12 @@ export function Stats() {
               <Metric
                 value={projection.patients}
                 format={(n) => Math.round(n).toString()}
-                label="New patients a month you're not getting today"
+                label="New patients recovered per month"
               />
               <Metric
                 value={projection.production}
                 format={money}
-                label="Projected production over a year"
+                label="Production no longer left on the table"
               />
               <Metric
                 value={projection.hours}
