@@ -107,17 +107,36 @@ export function Stats() {
         <Reveal>
           <MonoLabel>WHY RALLY</MonoLabel>
           <h2 className="mt-6 text-[2rem] leading-[1.12] font-semibold text-ink sm:text-[2.5rem]">
-            Doing nothing about AI is a decision. It&apos;s just the expensive one.
+            Rally is the AI partner that shows up before you buy anything.
           </h2>
         </Reveal>
         <Reveal delay={80}>
-          <p className="text-[17px] leading-relaxed text-warm-grey">
-            Small practices miss roughly one in four inbound calls. That&apos;s not a phone problem,
-            it&apos;s a schedule with holes in it. The offices already using AI are pulling ahead on
-            scheduling, follow-up, and unscheduled treatment. Rally teaches your team what AI can do
-            in a dental practice, then builds the parts worth building. Nothing to buy, no
-            year-long contract, no jargon. Your real tasks, your screen, your team in the room.
-          </p>
+          <div className="space-y-6 text-[17px] leading-relaxed text-warm-grey">
+            <p>
+              Most AI vendors hand you a login and a training video. We do the work with your team on
+              your screen until it actually runs.
+            </p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div>
+                <h3 className="text-[15px] font-semibold text-ink">Teach on real tasks</h3>
+                <p className="mt-1 text-[15px] leading-snug text-warm-grey">
+                  Recall lists, insurance checks, patient emails — we run your actual work through
+                  AI until your front desk can do it without us.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-[15px] font-semibold text-ink">Build only what saves time</h3>
+                <p className="mt-1 text-[15px] leading-snug text-warm-grey">
+                  No platform to learn, no year-long contract. We build the workflow, run it, and
+                  hand it back when it&apos;s boring.
+                </p>
+              </div>
+            </div>
+            <p>
+              Month to month, because if it stops saving you time you cancel. That part keeps us
+              honest — and the meetings short.
+            </p>
+          </div>
         </Reveal>
       </div>
 
