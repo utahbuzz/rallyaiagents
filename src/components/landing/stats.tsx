@@ -107,23 +107,42 @@ export function Stats() {
         <Reveal>
           <MonoLabel>WHY RALLY</MonoLabel>
           <h2 className="mt-6 text-[2rem] leading-[1.12] font-semibold text-ink sm:text-[2.5rem]">
-            Doing nothing about AI is a decision. It&apos;s just the expensive one.
+            Rally is the AI partner that shows up before you buy anything.
           </h2>
         </Reveal>
         <Reveal delay={80}>
-          <p className="text-[17px] leading-relaxed text-warm-grey">
-            Small practices miss roughly one in four inbound calls. That&apos;s not a phone problem,
-            it&apos;s a schedule with holes in it. The offices already using AI are pulling ahead on
-            scheduling, follow-up, and unscheduled treatment. Rally teaches your team what AI can do
-            in a dental practice, then builds the parts worth building. Nothing to buy, no
-            year-long contract, no jargon. Your real tasks, your screen, your team in the room.
-          </p>
+          <div className="space-y-6 text-[17px] leading-relaxed text-warm-grey">
+            <p>
+              Most AI vendors hand you a login and a training video. We do the work with your team on
+              your screen until it actually runs.
+            </p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div>
+                <h3 className="text-[15px] font-semibold text-ink">Teach on real tasks</h3>
+                <p className="mt-1 text-[15px] leading-snug text-warm-grey">
+                  Recall lists, insurance checks, patient emails — we run your actual work through
+                  AI until your front desk can do it without us.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-[15px] font-semibold text-ink">Build only what saves time</h3>
+                <p className="mt-1 text-[15px] leading-snug text-warm-grey">
+                  No platform to learn, no year-long contract. We build the workflow, run it, and
+                  hand it back when it&apos;s boring.
+                </p>
+              </div>
+            </div>
+            <p>
+              Month to month, because if it stops saving you time you cancel. That part keeps us
+              honest — and the meetings short.
+            </p>
+          </div>
         </Reveal>
       </div>
 
       <Reveal delay={120} className="mt-14">
         <div className="rounded-3xl border border-border bg-bone p-6 sm:p-9">
-          <MonoLabel>What this could look like for your practice</MonoLabel>
+          <MonoLabel>What that partnership could free up</MonoLabel>
 
           <div className="mt-7 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:gap-14">
             <div className="space-y-7">
@@ -193,12 +212,12 @@ export function Stats() {
               <Metric
                 value={projection.patients}
                 format={(n) => Math.round(n).toString()}
-                label="New patients a month you're not getting today"
+                label="New patients recovered per month"
               />
               <Metric
                 value={projection.production}
                 format={money}
-                label="Projected production over a year"
+                label="Production no longer left on the table"
               />
               <Metric
                 value={projection.hours}
@@ -209,27 +228,29 @@ export function Stats() {
           </div>
 
           <p className="mt-9 border-t border-dashed border-border pt-6 text-[13.5px] leading-relaxed text-warm-grey">
-            Estimates, not promises. Benchmark: small healthcare practices miss about one in four
-            inbound calls (Solutionreach). We count half of those as recoverable and 35% of those as
-            starts, which is deliberately conservative. Your numbers will be different. Sorting out
-            which ones move is what the first call is for.{" "}
+            These numbers are deliberately conservative. The benchmark is one in four inbound
+            calls missed at small healthcare practices (Solutionreach). We only count half as
+            recoverable and 35% of those as starts. Your real numbers come from the free call.{" "}
             <a href="#book" className="text-primary underline underline-offset-4">
-              Book the call
+              Book it here
             </a>
             .
           </p>
         </div>
       </Reveal>
 
-      <Reveal delay={140} className="mt-16 flex flex-wrap justify-center gap-3">
-        {tags.map((t) => (
-          <span
-            key={t}
-            className="rounded-full border border-border bg-bone px-4 py-2 text-[14px] text-ink"
-          >
-            {t}
-          </span>
-        ))}
+      <Reveal delay={140} className="mt-16 flex flex-col items-center gap-4">
+        <MonoLabel>Built for these practices</MonoLabel>
+        <div className="flex flex-wrap justify-center gap-3">
+          {tags.map((t) => (
+            <span
+              key={t}
+              className="rounded-full border border-border bg-bone px-4 py-2 text-[14px] text-ink"
+            >
+              {t}
+            </span>
+          ))}
+        </div>
       </Reveal>
     </Section>
   );
