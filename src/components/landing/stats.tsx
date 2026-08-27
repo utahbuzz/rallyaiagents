@@ -239,15 +239,18 @@ export function Stats() {
         </div>
       </Reveal>
 
-      <Reveal delay={140} className="mt-16 flex flex-wrap justify-center gap-3">
-        {tags.map((t) => (
-          <span
-            key={t}
-            className="rounded-full border border-border bg-bone px-4 py-2 text-[14px] text-ink"
-          >
-            {t}
-          </span>
-        ))}
+      <Reveal delay={140} className="mt-16 flex flex-col items-center gap-4">
+        <MonoLabel>Built for these practices</MonoLabel>
+        <div className="flex flex-wrap justify-center gap-3">
+          {tags.map((t) => (
+            <span
+              key={t}
+              className="rounded-full border border-border bg-bone px-4 py-2 text-[14px] text-ink"
+            >
+              {t}
+            </span>
+          ))}
+        </div>
       </Reveal>
     </Section>
   );
