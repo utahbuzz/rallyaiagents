@@ -7,7 +7,11 @@ import avatarSarah from "@/assets/avatar-sarah.jpg";
 import { HeroWidget } from "./hero-widget";
 import { Cta, PillBadge, Reveal } from "./primitives";
 
-const reassurances = ["Free first call", "Nothing to buy", "No jargon"];
+const reassurances = [
+  "See where AI fits in your practice",
+  "Find out what competitors already run",
+  "Leave the call with a plan, not a pitch",
+];
 const avatars = [avatarSarah, avatarChelsea, avatarJames];
 
 export function Hero() {
