@@ -65,12 +65,15 @@ function useCountUp(target: number) {
 function Metric({ value, format, label }: { value: number; format: (n: number) => string; label: string }) {
   const n = useCountUp(value);
   return (
-    <div className="grid grid-cols-[5.5rem_minmax(0,1fr)] items-center gap-4 border-b border-dashed border-border py-5 first:pt-0 last:border-b-0 last:pb-0 sm:flex sm:min-w-0 sm:flex-col sm:items-start sm:border-b-0 sm:border-l sm:px-5 sm:py-0 sm:first:border-l-0 sm:first:pl-0 sm:last:pr-0">
-      <p className="text-[2.4rem] leading-none font-semibold text-ink sm:text-[2.65rem] lg:text-[2.9rem]">
+    <div className="flex min-w-0 flex-col gap-1.5 border-b border-dashed border-border py-4 first:pt-0 last:border-b-0 last:pb-0 sm:gap-3 sm:border-b-0 sm:border-l sm:px-5 sm:py-0 sm:first:border-l-0 sm:first:pl-0 sm:last:pr-0">
+      <p className="text-[2.2rem] leading-none font-semibold tracking-tight text-ink sm:text-[2.5rem] lg:text-[2.75rem]">
         {format(n)}
       </p>
-      <p className="text-[14.5px] leading-snug text-warm-grey sm:mt-3 sm:min-h-[3.6rem]">{label}</p>
+      <p className="text-[14px] leading-snug text-balance text-warm-grey sm:min-h-[3.4rem] sm:text-[14.5px]">
+        {label}
+      </p>
     </div>
+
   );
 }
 
