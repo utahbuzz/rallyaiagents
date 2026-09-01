@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import { Faq } from "@/components/landing/faq";
-import { Features } from "@/components/landing/features";
 import { FinalCta } from "@/components/landing/final-cta";
 import { Footer } from "@/components/landing/footer";
 import { Hero } from "@/components/landing/hero";
@@ -41,8 +40,7 @@ function LandingPage() {
           <Marquee />
         </div>
         <Stats />
-        <HowItWorks />
-        <Features />
+<HowItWorks />
         <WhatWeHelpWith />
         <Testimonials />
         <Faq />

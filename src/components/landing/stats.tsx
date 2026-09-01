@@ -115,40 +115,36 @@ export function Stats() {
         </Reveal>
 <Reveal delay={80}>
           <div className="space-y-6 text-[17px] leading-relaxed text-warm-grey">
-            <p>
+<p>
               It&apos;s not that you&apos;re behind. You can picture it — the phone answered, recall
               handled, insurance checked before the claim goes out. What you don&apos;t have is the
-              time, the knowledge, or the resources to get from picturing it to running it. That gap
-              is exactly what Rally is for.
+              time, knowledge, or resources to get from picturing it to running it. That gap is
+              exactly what Rally is for.
             </p>
             <div className="grid gap-4 sm:grid-cols-3">
               <div>
                 <h3 className="text-[15px] font-semibold text-ink">Teach your team</h3>
-                <p className="mt-1 text-[15px] leading-snug text-warm-grey">
-                  AI only works if the people using it trust it. We run your real work — recall
-                  lists, insurance checks, patient emails — with your front desk until they can do
-                  it without us.
+<p className="mt-1 text-[15px] leading-snug text-warm-grey">
+                  AI works only if your team trusts it. We run your real work — recall lists,
+                  insurance checks, patient emails — alongside your front desk until they can do it
+                  without us.
                 </p>
               </div>
               <div>
                 <h3 className="text-[15px] font-semibold text-ink">Build the procedures</h3>
-                <p className="mt-1 text-[15px] leading-snug text-warm-grey">
+<p className="mt-1 text-[15px] leading-snug text-warm-grey">
                   No platform to learn, no year-long contract. We build the workflows your practice
-                  actually needs, one at a time, starting with whatever saves the most hours.
+                  needs, one at a time, starting with whatever saves the most hours.
                 </p>
               </div>
               <div>
                 <h3 className="text-[15px] font-semibold text-ink">Maintain it over time</h3>
-                <p className="mt-1 text-[15px] leading-snug text-warm-grey">
-                  AI doesn&apos;t stay set up by itself. We keep it running, tune it as your practice
-                  changes, and stay as long as it&apos;s saving you time.
+<p className="mt-1 text-[15px] leading-snug text-warm-grey">
+                  AI doesn&apos;t stay set up by itself. We keep it running and tune it as your
+                  practice changes, as long as it&apos;s saving you time.
                 </p>
               </div>
             </div>
-            <p>
-              Month to month. If it ever stops saving you time, you cancel. That keeps us honest —
-              and the meetings short.
-            </p>
           </div>
         </Reveal>
       </div>
