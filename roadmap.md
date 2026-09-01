@@ -9,3 +9,4 @@
 - [x] Standardize contact email to hello@try-rally.com (landing + football)
 - [ ] User pastes final privacy/terms text — drop into the placeholder pages verbatim
 - [ ] Gate /football so the public can't access it until launch (password gate — pending password choice)
+- [ ] Email hello@try-rally.com when a call is requested (landing lead form + football form) — needs email domain
