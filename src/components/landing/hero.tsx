@@ -1,8 +1,4 @@
-import { Check, Star } from "lucide-react";
-
-import avatarChelsea from "@/assets/avatar-chelsea.jpg";
-import avatarJames from "@/assets/avatar-james.jpg";
-import avatarSarah from "@/assets/avatar-sarah.jpg";
+import { Check } from "lucide-react";
 
 import { HeroWidget } from "./hero-widget";
 import { Cta, PillBadge, Reveal } from "./primitives";
@@ -12,7 +8,7 @@ const reassurances = [
   "Find out what competitors already run",
   "Leave the call with a plan, not a pitch",
 ];
-const avatars = [avatarSarah, avatarChelsea, avatarJames];
+
 
 export function Hero() {
   return (
@@ -52,33 +48,8 @@ export function Hero() {
             </div>
           </Reveal>
 
-          <Reveal delay={240}>
-            <div className="mt-8 flex items-center justify-center gap-4">
-              <div className="flex -space-x-2.5">
-                {avatars.map((a, i) => (
-                  <img
-                    key={i}
-                    src={a}
-                    alt=""
-                    aria-hidden
-                    className="size-9 rounded-full border-2 border-background object-cover"
-                  />
-                ))}
-              </div>
-              <div className="text-left">
-                <div aria-hidden className="flex gap-0.5">
-                  {Array.from({ length: 5 }).map((_, s) => (
-                    <Star key={s} className="size-3.5 fill-primary text-primary" />
-                  ))}
-                </div>
-                <p className="mt-1 text-[13.5px] text-warm-grey">
-                  40+ practice teams trained &middot; 5.0
-                </p>
-              </div>
-            </div>
-          </Reveal>
 
-          <Reveal delay={280}>
+          <Reveal delay={240}>
             <ul className="mt-7 flex flex-wrap items-center justify-center gap-x-6 gap-y-2.5">
               {reassurances.map((r) => (
                 <li key={r} className="flex items-center gap-2 text-[14.5px] text-warm-grey">
