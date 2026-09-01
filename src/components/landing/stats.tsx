@@ -65,11 +65,11 @@ function useCountUp(target: number) {
 function Metric({ value, format, label }: { value: number; format: (n: number) => string; label: string }) {
   const n = useCountUp(value);
   return (
-    <div>
+    <div className="flex flex-col">
       <p className="text-[2.4rem] leading-none font-semibold text-ink sm:text-[2.9rem]">
         {format(n)}
       </p>
-      <p className="mt-3 text-[14.5px] leading-snug text-warm-grey">{label}</p>
+      <p className="mt-3 flex-1 text-[14.5px] leading-snug text-warm-grey sm:flex sm:items-end">{label}</p>
     </div>
   );
 }
@@ -106,35 +106,45 @@ export function Stats() {
       <div className="grid gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
         <Reveal>
           <MonoLabel>WHY RALLY</MonoLabel>
-          <h2 className="mt-6 text-[2rem] leading-[1.12] font-semibold text-ink sm:text-[2.5rem]">
-            Rally is the AI partner that shows up before you buy anything.
+<h2 className="mt-6 text-[2rem] leading-[1.12] font-semibold text-ink sm:text-[2.5rem]">
+            You know AI belongs in your practice. You just don&apos;t have time to figure out how.
           </h2>
         </Reveal>
-        <Reveal delay={80}>
+<Reveal delay={80}>
           <div className="space-y-6 text-[17px] leading-relaxed text-warm-grey">
             <p>
-              Most AI vendors hand you a login and a training video. We do the work with your team on
-              your screen until it actually runs.
+              It&apos;s not that you&apos;re behind. You can picture it — the phone answered, recall
+              handled, insurance checked before the claim goes out. What you don&apos;t have is the
+              time, the knowledge, or the resources to get from picturing it to running it. That gap
+              is exactly what Rally is for.
             </p>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-3">
               <div>
-                <h3 className="text-[15px] font-semibold text-ink">Teach on real tasks</h3>
+                <h3 className="text-[15px] font-semibold text-ink">Teach your team</h3>
                 <p className="mt-1 text-[15px] leading-snug text-warm-grey">
-                  Recall lists, insurance checks, patient emails — we run your actual work through
-                  AI until your front desk can do it without us.
+                  AI only works if the people using it trust it. We run your real work — recall
+                  lists, insurance checks, patient emails — with your front desk until they can do
+                  it without us.
                 </p>
               </div>
               <div>
-                <h3 className="text-[15px] font-semibold text-ink">Build only what saves time</h3>
+                <h3 className="text-[15px] font-semibold text-ink">Build the procedures</h3>
                 <p className="mt-1 text-[15px] leading-snug text-warm-grey">
-                  No platform to learn, no year-long contract. We build the workflow, run it, and
-                  hand it back when it&apos;s boring.
+                  No platform to learn, no year-long contract. We build the workflows your practice
+                  actually needs, one at a time, starting with whatever saves the most hours.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-[15px] font-semibold text-ink">Maintain it over time</h3>
+                <p className="mt-1 text-[15px] leading-snug text-warm-grey">
+                  AI doesn&apos;t stay set up by itself. We keep it running, tune it as your practice
+                  changes, and stay as long as it&apos;s saving you time.
                 </p>
               </div>
             </div>
             <p>
-              Month to month, because if it stops saving you time you cancel. That part keeps us
-              honest — and the meetings short.
+              Month to month. If it ever stops saving you time, you cancel. That keeps us honest —
+              and the meetings short.
             </p>
           </div>
         </Reveal>
@@ -208,7 +218,7 @@ export function Stats() {
               </div>
             </div>
 
-            <div className="grid gap-8 border-t border-dashed border-border pt-8 sm:grid-cols-3 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-14">
+            <div className="grid gap-5 border-t border-dashed border-border pt-8 sm:grid-cols-3 sm:gap-8 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-14">
               <Metric
                 value={projection.patients}
                 format={(n) => Math.round(n).toString()}
