@@ -65,11 +65,11 @@ function useCountUp(target: number) {
 function Metric({ value, format, label }: { value: number; format: (n: number) => string; label: string }) {
   const n = useCountUp(value);
   return (
-    <div className="flex flex-col">
-      <p className="text-[2.4rem] leading-none font-semibold text-ink sm:text-[2.9rem]">
+    <div className="grid grid-cols-[5.5rem_minmax(0,1fr)] items-center gap-4 border-b border-dashed border-border py-5 first:pt-0 last:border-b-0 last:pb-0 sm:flex sm:min-w-0 sm:flex-col sm:items-start sm:border-b-0 sm:border-l sm:px-5 sm:py-0 sm:first:border-l-0 sm:first:pl-0 sm:last:pr-0">
+      <p className="text-[2.4rem] leading-none font-semibold text-ink sm:text-[2.65rem] lg:text-[2.9rem]">
         {format(n)}
       </p>
-      <p className="mt-3 flex-1 text-[14.5px] leading-snug text-warm-grey sm:flex sm:items-end">{label}</p>
+      <p className="text-[14.5px] leading-snug text-warm-grey sm:mt-3 sm:min-h-[3.6rem]">{label}</p>
     </div>
   );
 }
@@ -218,7 +218,7 @@ export function Stats() {
               </div>
             </div>
 
-            <div className="grid gap-5 border-t border-dashed border-border pt-8 sm:grid-cols-3 sm:gap-8 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-14">
+            <div className="grid gap-0 border-t border-dashed border-border pt-6 sm:grid-cols-3 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-9">
               <Metric
                 value={projection.patients}
                 format={(n) => Math.round(n).toString()}
