@@ -53,11 +53,11 @@ const Email = ({
         <Text style={intro}>Someone just asked to book a call with Rally.</Text>
         <Hr style={hr} />
         <Row label="Name" value={name} />
-        <Row label="Practice / Program" value={organization} />
-        <Row label="Contact" value={contact} />
+        {organization ? <Row label="Practice / Program" value={organization} /> : null}
+        {contact ? <Row label="Contact" value={contact} /> : null}
         {detailValue ? <Row label={detailLabel || 'Detail'} value={detailValue} /> : null}
-        <Row label={extraLabel || 'Extra'} value={extraValue} />
-        <Row label="Submitted" value={submittedAt} />
+        {extraValue ? <Row label={extraLabel || 'Extra'} value={extraValue} /> : null}
+        {submittedAt ? <Row label="Submitted" value={submittedAt} /> : null}
         <Hr style={hr} />
         <Text style={footer}>Reply to this person directly using the contact above.</Text>
       </Container>
