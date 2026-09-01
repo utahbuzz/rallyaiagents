@@ -28,5 +28,41 @@ export const submitLead = createServerFn({ method: "POST" })
       hardest_part: data.hardestPart,
     });
     if (error) throw new Error(error.message);
+
+    const sizeLabels: Record<string, string> = {
+      solo_two: "Solo or two providers",
+      three_six: "3-6 people",
+      multi_dso: "Multi-location / DSO",
+    };
+    const hardestLabels: Record<string, string> = {
+      new_patient_followup: "New patient follow-up",
+      insurance_verification: "Insurance verification",
+      unscheduled_treatment: "Unscheduled treatment",
+      no_shows_recall: "No-shows and recall",
+      charting_notes: "Charting and notes",
+      not_sure: "Not sure yet",
+    };
+
+    try {
+      const { sendTemplateEmail } = await import("@/lib/email-templates/send-email");
+      await sendTemplateEmail("new-lead-notification", "hello@try-rally.com", {
+        templateData: {
+          source: "Rally — dental practices",
+          name: data.name,
+          organization: data.practiceName,
+          contact: data.contact,
+          detailLabel: "Practice size",
+          detailValue: sizeLabels[data.practiceSize] ?? data.practiceSize,
+          extraLabel: "Where the day gets hardest",
+          extraValue: hardestLabels[data.hardestPart] ?? data.hardestPart,
+          submittedAt: new Date().toUTCString(),
+        },
+        idempotencyKey: `lead-${data.contact}-${Date.now()}`,
+        replyTo: data.contact.includes("@") ? data.contact : undefined,
+      });
+    } catch (err) {
+      console.error("lead notification email failed", err);
+    }
+
     return { ok: true as const };
   });

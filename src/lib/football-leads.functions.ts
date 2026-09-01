@@ -37,5 +37,44 @@ export const submitFootballLead = createServerFn({ method: "POST" })
       pain_point: data.painPoint,
     });
     if (error) throw new Error(error.message);
+
+    const roleLabels: Record<string, string> = {
+      head_coach: "Head coach",
+      athletic_director: "Athletic director",
+      general_manager: "General manager",
+      operations: "Operations",
+      other: "Other",
+    };
+    const painLabels: Record<string, string> = {
+      recruiting: "Recruiting",
+      donor_alumni: "Donor and alumni",
+      ticketing: "Ticketing",
+      nil_compliance: "NIL and compliance",
+      parent_comms: "Parent communication",
+      film_scouting: "Film and scouting",
+      not_sure: "Not sure yet",
+    };
+
+    try {
+      const { sendTemplateEmail } = await import("@/lib/email-templates/send-email");
+      await sendTemplateEmail("new-lead-notification", "hello@try-rally.com", {
+        templateData: {
+          source: "Rally — football programs",
+          name: data.name,
+          organization: data.program,
+          contact: data.phone ? `${data.email} · ${data.phone}` : data.email,
+          detailLabel: "Role",
+          detailValue: roleLabels[data.role] ?? data.role,
+          extraLabel: "Biggest pain point",
+          extraValue: painLabels[data.painPoint] ?? data.painPoint,
+          submittedAt: new Date().toUTCString(),
+        },
+        idempotencyKey: `football-lead-${data.email}-${Date.now()}`,
+        replyTo: data.email,
+      });
+    } catch (err) {
+      console.error("football lead notification email failed", err);
+    }
+
     return { ok: true as const };
   });
