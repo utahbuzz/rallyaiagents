@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, notFound } from "@tanstack/react-router";
 
 import { FootballDualCta } from "@/components/football/dual-cta";
 import { FootballFaq } from "@/components/football/faq";
@@ -16,6 +16,10 @@ const description =
   "Football adopts innovation first. Rally builds small, focused AI workflows that take busywork off coaching staff and front offices, with staff training included. Book a free 15-minute scoping call.";
 
 export const Route = createFileRoute("/football")({
+  beforeLoad: () => {
+    // Not live yet — hard-block until launch. Remove this block to publish the page.
+    throw notFound();
+  },
   head: () => ({
     meta: [
       { title },
