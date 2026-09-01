@@ -9,7 +9,7 @@ import { Marquee } from "@/components/landing/marquee";
 import { Nav } from "@/components/landing/nav";
 import { Stats } from "@/components/landing/stats";
 import { StickyCta } from "@/components/landing/sticky-cta";
-import { Testimonials } from "@/components/landing/testimonials";
+
 import { WhatWeHelpWith } from "@/components/landing/what-we-help-with";
 
 const title = "Rally — AI partners for dental practices";
@@ -42,7 +42,7 @@ function LandingPage() {
         <Stats />
 <HowItWorks />
         <WhatWeHelpWith />
-        <Testimonials />
+        
         <Faq />
         <FinalCta />
       </main>
