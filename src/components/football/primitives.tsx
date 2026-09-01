@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 /** Swap this for the real scheduling link once it exists. */
 export const BOOKING_URL = "https://cal.com/rally/football-scoping-call";
-export const CONTACT_EMAIL = "football@rally.ai";
+export const CONTACT_EMAIL = "hello@try-rally.com";
 export const PRIMARY_CTA = "Book a free scoping call";
 export const SECONDARY_CTA = "See if we're a fit";
 

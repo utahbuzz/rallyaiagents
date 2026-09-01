@@ -1,3 +1,5 @@
+import { Link } from "@tanstack/react-router";
+
 import rallyLogo from "@/assets/rally-logo.png.asset.json";
 
 const company = [
@@ -64,9 +66,23 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-wrap items-center justify-between gap-3 border-t border-bone/10 pt-6">
+<div className="mt-14 flex flex-wrap items-center justify-between gap-3 border-t border-bone/10 pt-6">
           <p className="text-[13.5px] text-bone/45">© 2026 Rally Co. All rights reserved.</p>
-          <p className="text-[13.5px] text-bone/45">Powered by Rally</p>
+          <div className="flex items-center gap-5">
+            <Link
+              to="/privacy"
+              className="focus-ring rounded-md text-[13.5px] text-bone/45 transition-colors hover:text-bone"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              to="/terms"
+              className="focus-ring rounded-md text-[13.5px] text-bone/45 transition-colors hover:text-bone"
+            >
+              Terms of Service
+            </Link>
+            <p className="text-[13.5px] text-bone/45">Powered by Rally</p>
+          </div>
         </div>
       </div>
     </footer>
