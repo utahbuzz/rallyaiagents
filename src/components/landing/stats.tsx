@@ -65,11 +65,11 @@ function useCountUp(target: number) {
 function Metric({ value, format, label }: { value: number; format: (n: number) => string; label: string }) {
   const n = useCountUp(value);
   return (
-    <div>
+    <div className="flex flex-col">
       <p className="text-[2.4rem] leading-none font-semibold text-ink sm:text-[2.9rem]">
         {format(n)}
       </p>
-      <p className="mt-3 text-[14.5px] leading-snug text-warm-grey sm:min-h-[3.75rem]">{label}</p>
+      <p className="mt-3 flex-1 text-[14.5px] leading-snug text-warm-grey sm:flex sm:items-end">{label}</p>
     </div>
   );
 }
@@ -218,7 +218,7 @@ export function Stats() {
               </div>
             </div>
 
-            <div className="grid gap-6 border-t border-dashed border-border pt-8 sm:grid-cols-3 sm:gap-8 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-14">
+            <div className="grid gap-5 border-t border-dashed border-border pt-8 sm:grid-cols-3 sm:gap-8 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-14">
               <Metric
                 value={projection.patients}
                 format={(n) => Math.round(n).toString()}
