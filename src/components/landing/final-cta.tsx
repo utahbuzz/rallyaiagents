@@ -212,7 +212,7 @@ export function FinalCta() {
                 {status === "error" ? (
                   <p className="tint mt-5 rounded-[10px] px-4 py-3 text-[14px] text-primary">
                     That didn&apos;t send. Your answers are still here — try once more, or email
-                    hello@rally.ai.
+                    hello@try-rally.com.
                   </p>
                 ) : null}
 
