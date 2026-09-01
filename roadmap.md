@@ -8,5 +8,5 @@
 - [x] Add Privacy Policy (/privacy) and Terms of Service (/terms) pages + footer links
 - [x] Standardize contact email to hello@try-rally.com (landing + football)
 - [ ] User pastes final privacy/terms text — drop into the placeholder pages verbatim
-- [ ] Gate /football so the public can't access it until launch (password gate — pending password choice)
-- [ ] Email hello@try-rally.com when a call is requested (landing lead form + football form) — needs email domain
+- [x] Gate /football: hard block (notFound) until launch — remove beforeLoad guard in src/routes/football.tsx to publish
+- [ ] Email hello@try-rally.com when a call is requested (landing lead form + football form) — blocked on email domain setup
