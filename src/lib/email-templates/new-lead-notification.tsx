@@ -55,7 +55,7 @@ const Email = ({
         <Row label="Name" value={name} />
         <Row label="Practice / Program" value={organization} />
         <Row label="Contact" value={contact} />
-        <Row label={detailLabel || 'Detail'} value={detailValue} />
+        {detailValue ? <Row label={detailLabel || 'Detail'} value={detailValue} /> : null}
         <Row label={extraLabel || 'Extra'} value={extraValue} />
         <Row label="Submitted" value={submittedAt} />
         <Hr style={hr} />

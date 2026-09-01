@@ -45,7 +45,7 @@ export const submitLead = createServerFn({ method: "POST" })
 
     try {
       const { sendTemplateEmail } = await import("@/lib/email-templates/send-email");
-      await sendTemplateEmail("new-lead-notification", "hello@try-rally.com", {
+      const emailOptions = {
         templateData: {
           source: "Rally — dental practices",
           name: data.name,
@@ -58,8 +58,9 @@ export const submitLead = createServerFn({ method: "POST" })
           submittedAt: new Date().toUTCString(),
         },
         idempotencyKey: `lead-${data.contact}-${Date.now()}`,
-        replyTo: data.contact.includes("@") ? data.contact : undefined,
-      });
+        ...(data.contact.includes("@") ? { replyTo: data.contact } : {}),
+      };
+      await sendTemplateEmail("new-lead-notification", "hello@try-rally.com", emailOptions);
     } catch (err) {
       console.error("lead notification email failed", err);
     }
