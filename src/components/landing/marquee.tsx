@@ -20,16 +20,15 @@ const clients = [
 ];
 
 export function Marquee() {
-  const row = [...clients, ...clients, ...clients];
   return (
     <section className="border-y border-border bg-bone py-14 sm:py-16">
       <div className="flex flex-col items-center text-center">
         <MonoLabel>Previously worked with</MonoLabel>
       </div>
-      <div className="marquee-mask mt-8 overflow-hidden">
-        <ul className="marquee-track flex w-max items-center gap-12 sm:gap-16">
-          {row.map((c, i) => (
-            <li key={`${c.name}-${i}`} className="shrink-0">
+      <div className="mx-auto mt-8 max-w-5xl px-6">
+        <ul className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 sm:gap-x-16">
+          {clients.map((c) => (
+            <li key={c.name} className="shrink-0">
               <span
                 role="img"
                 aria-label={c.name}
